@@ -8,13 +8,12 @@ import {
 } from "react-router-dom"
 
 import Header from './components/header/Header'
-import Pagination from './components/pagination/Pagination'
 
 function App() {
   return (
     <div className="App">
       <Header title='Blog'/>
-      <a className="waves-effect waves-light deep-purple lighten-3 btn"><i className="material-icons left">edit</i>Редактировать</a>
+      <a className="waves-effect waves-light redC-bg lighten-3 btn"><i className="material-icons left">edit</i>Редактировать</a>
 
       <Router>
         <Switch>
@@ -23,8 +22,6 @@ function App() {
           ))}
         </Switch>
       </Router>
-
-      <Pagination/>
     </div>
   );
 }

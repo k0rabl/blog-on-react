@@ -1,12 +1,12 @@
 import './Header.sass'
 
 import React, { Component } from "react"
-import HeaderProps from "../../interfaces/Header"
+import IHeader from "../../interfaces/IHeader"
 import Calendar from "../calendar/Calendar"
 import Search from "../Search/Search"
 
-class Header extends Component<HeaderProps> {
-  constructor(props: HeaderProps){
+class Header extends Component<IHeader> {
+  constructor(props: IHeader){
     super(props)
     
   }
@@ -15,7 +15,7 @@ class Header extends Component<HeaderProps> {
     return (
       <header>
           <Search/>
-          <div className="brand-logo s6">{this.props.title}</div>
+          <div className="brand-logo s6 redC">{this.props.title}</div>
           <Calendar/>
       </header>
     )

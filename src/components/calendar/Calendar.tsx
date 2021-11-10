@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 
 class Calendar extends Component{
   render() {
-    return <input type='date' value='' />
+    
+    return (
+      <div className="input-field inline s6">
+        <input type='date' value='' />
+      </div>
+    )
   }
 } 
 

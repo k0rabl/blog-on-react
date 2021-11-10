@@ -1,6 +1,6 @@
-import Article from "../interfaces/Article";
+import IArticle from "../interfaces/IArticle";
 
-const Articles: Article[] = [
+const Articles: IArticle[] = [
   {
     id: 1,
     date: new Date(),

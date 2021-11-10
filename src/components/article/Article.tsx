@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ArticleProps from '../../interfaces/Article'
+import IArticle from '../../interfaces/IArticle'
 
-class Article extends Component<ArticleProps> {
-  constructor(props: ArticleProps){
+class Article extends Component<IArticle> {
+  constructor(props: IArticle){
     super(props)
   }
 

@@ -1,4 +1,4 @@
-interface Article {
+interface IArticle {
   id: number
   name: String
   image?: Object
@@ -7,4 +7,5 @@ interface Article {
   date: Date
 }
 
-export default Article
+export default IArticle
+
