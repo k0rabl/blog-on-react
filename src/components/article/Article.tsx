@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import IArticle from '../../interfaces/IArticle'
+import IArticle from './IArticle'
 
 class Article extends Component<IArticle> {
-  constructor(props: IArticle){
-    super(props)
-  }
+  // constructor(props: IArticle){
+  //   super(props)
+  // }
 
   render() {
     const { date, name, desc } = this.props

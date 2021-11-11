@@ -1,4 +1,4 @@
-import IArticle from "../interfaces/IArticle";
+import IArticle from "../components/article/IArticle";
 
 const Articles: IArticle[] = [
   {
@@ -12,7 +12,7 @@ const Articles: IArticle[] = [
   {
     id: 2,
     date: new Date(),
-    name: 'How to use hooks in React?',
+    name: 'How to use hooks in React? (||)',
     image: {},
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
@@ -43,6 +43,30 @@ const Articles: IArticle[] = [
   },
   {
     id: 6,
+    date: new Date(),
+    name: 'second page',
+    image: {},
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
+    isRead: false
+  },
+  {
+    id: 7,
+    date: new Date(),
+    name: 'How to use hooks in React?',
+    image: {},
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
+    isRead: false
+  },
+  {
+    id: 8,
+    date: new Date(),
+    name: 'How to use hooks in React?',
+    image: {},
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
+    isRead: false
+  },
+  {
+    id: 9,
     date: new Date(),
     name: 'How to use hooks in React?',
     image: {},

@@ -5,7 +5,7 @@ class Calendar extends Component{
     
     return (
       <div className="input-field inline s6">
-        <input type='date' value='' />
+        {/* <input type='date' value='' /> */}
       </div>
     )
   }

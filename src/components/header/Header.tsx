@@ -1,15 +1,15 @@
 import './Header.sass'
 
 import React, { Component } from "react"
-import IHeader from "../../interfaces/IHeader"
+import IHeader from "./IHeader"
 import Calendar from "../calendar/Calendar"
 import Search from "../Search/Search"
 
 class Header extends Component<IHeader> {
-  constructor(props: IHeader){
+ /*  constructor(props: IHeader){
     super(props)
     
-  }
+  } */
 
   render() {
     return (

@@ -1,7 +1,7 @@
 import './Pagination.sass'
 
 import React, { Component } from 'react'
-import {IPaginationProps, IPaginationState} from '../../interfaces/IPagination'
+import {IPaginationProps, IPaginationState} from './IPagination'
 
 
 class Pagination extends Component<IPaginationProps, IPaginationState>{

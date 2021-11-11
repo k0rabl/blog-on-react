@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header title='Blog'/>
-      <a className="waves-effect waves-light redC-bg lighten-3 btn"><i className="material-icons left">edit</i>Редактировать</a>
+      <a href="/" className="waves-effect waves-light redC-bg lighten-3 btn"><i className="material-icons left">edit</i>Редактировать</a>
 
       <Router>
         <Switch>
