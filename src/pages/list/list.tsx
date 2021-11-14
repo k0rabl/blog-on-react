@@ -4,47 +4,76 @@ import Article from '../../components/article/Article'
 import Pagination from '../../components/pagination/Pagination'
 import { IListProps, IListState } from './IList'
 import IArticle from '../../components/article/IArticle'
+
+
+import { connect } from "react-redux"
+import { RootState } from '../../redux/store'
+
 class List extends Component<IListProps, IListState>{
 
   constructor(props: IListProps){
     super(props)
 
     this.state = {
-      articlesArr: [],
-      active: 0
+      articlesArr: []
     }
   }
 
-  componentDidMount() {
+  handleSlise () {
+    const { articles } = this.props
+    
+    console.log('articles: ', articles);
+    
     let page: IArticle[]  = []
-    const pages: IArticle[][] = [];
+    const pages: IArticle[][] = [];  
 
-    Articles.forEach((element, index) => {
+    articles.forEach((element, index) => {
       page.push(element)
 
-      if (index > 0 && (index % 4 === 0 || index === Articles.length - 1 )) {
+      if (articles.length === 1)
+        pages.push([...articles])
+
+      if (index > 0 && (index % 4 === 0 || index === articles.length - 1 )) {
         pages.push(page)
         page = []
       }
 
     })  
-    
-    this.setState({articlesArr: pages})
+
+    return pages
   }
 
+  componentDidUpdate(prevProps: IListProps) {
+    if (this.props.articles !== prevProps.articles)
+      this.setState({articlesArr: this.handleSlise()})
+  }
+
+  componentDidMount() {
+    this.setState({articlesArr: this.handleSlise()})
+  }
+
+
   render() {
-    const { articlesArr, active } = this.state
+    const { articlesArr } = this.state
+    const { active } = this.props
 
     return (
       <>
-        {articlesArr[active]?.map((element, index) => <Article key={index} {...element}/>)}
+        {articlesArr[active - 1]?.map((element, index) => <Article key={index} {...element}/>)}
         { 
           articlesArr.length > 1 && 
-          <Pagination amount={articlesArr.length} />
+          <Pagination amount={articlesArr.length}/>
         }
       </>
     )
   }
 }
 
-export default List
+
+const mapStateToProps = (state: RootState) => ({
+  active: state.pagination.active,
+  articles: state.search.filteredArticles
+})
+
+
+export default connect(mapStateToProps)(List)

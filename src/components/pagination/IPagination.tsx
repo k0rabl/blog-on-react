@@ -1,8 +1,4 @@
-export interface IPaginationProps {
+export interface StoreProps {
   amount: number
-}
-
-export interface IPaginationState {
-  active: number
 }
 
