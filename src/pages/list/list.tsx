@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Articles from '../../fixtures/Articles'
 import Article from '../../components/article/Article'
 import Pagination from '../../components/pagination/Pagination'
 import { IListProps, IListState } from './IList'

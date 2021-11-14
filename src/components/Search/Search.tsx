@@ -1,7 +1,6 @@
 import React, { Component, ChangeEvent } from 'react'
 
 import { connect } from 'react-redux'
-import { RootState } from '../../redux/store'
 import { ISearchProps, ISearchState } from './ISearch'
 import { handleFilterString, handleDrop } from './SearchSlice'
 

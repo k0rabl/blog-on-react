@@ -1,6 +1,6 @@
 import './App.sass'
 import routes from './routes'
-
+import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,23 +8,29 @@ import {
 } from "react-router-dom"
 
 import Header from './components/header/Header'
+import Edit from './components/edit/Edit'
 // import Detail from './pages/detail/detail';
 
-function App() {
-  return (
-    <div className="App">
-      <Header title='Blog'/>
-      <a href="/" className="waves-effect waves-light redC-bg lighten-3 btn"><i className="material-icons left">edit</i>Редактировать</a>
+class App extends Component {
+ 
 
-      <Router>
-        <Switch>
-          {routes.map(({path, component}, key) => (
-            <Route key={key} path={path} component={component} /* children={<Child/>} *//>
-          ))}
-        </Switch>
-      </Router>
-    </div>
-  );
+  render(){
+    return (
+      <div className="App">
+        <Header title='Blog'/>
+        <Edit />
+  
+        <Router>
+          <Switch>
+            {routes.map(({path, component}, key) => (
+              <Route key={key} path={path} component={component} /* children={<Child/>} *//>
+            ))}
+          </Switch>
+        </Router>
+      </div>
+    )
+  }
+  
 }
 
 // function Child() {
