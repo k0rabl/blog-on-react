@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import {handleFilterDate, handleDrop} from '../Search/SearchSlice'
 import { ICalendarProps, ICalendarState } from './ICalendar'
 
+import './Calendar.sass'
+
 class Calendar extends Component<ICalendarProps, ICalendarState>{
   
   handleChange(e: ChangeEvent<HTMLInputElement>) {

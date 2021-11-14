@@ -22,8 +22,6 @@ class List extends Component<IListProps, IListState>{
   handleSlise () {
     const { articles } = this.props
     
-    console.log('articles: ', articles);
-    
     let page: IArticle[]  = []
     const pages: IArticle[][] = [];  
 

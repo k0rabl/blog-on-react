@@ -5,6 +5,8 @@ import { RootState } from '../../redux/store'
 import { ISearchProps, ISearchState } from './ISearch'
 import { handleFilterString, handleDrop } from './SearchSlice'
 
+import './Search.sass'
+
 class Search extends Component<ISearchProps, ISearchState>{
 
   constructor(props: ISearchProps){
@@ -32,10 +34,9 @@ class Search extends Component<ISearchProps, ISearchState>{
   render() {    
     const { searchValue } = this.state
     return  (
-      <div className="input-field inline s6">
-        <input id="search" type="search" onChange={e => this.handleChange(e)} value={searchValue}/>
-        <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
-        <i className="material-icons " onClick={() => this.dropSearch()}>close</i>
+      <div className="searchContainer">
+        <input type="search" onChange={e => this.handleChange(e)} value={searchValue} placeholder='Search'/>
+        <i className={`material-icons close ${!!searchValue ? 'show': ''}`} onClick={() => this.dropSearch()}>close</i>
       </div>
     )
   }
