@@ -10,6 +10,7 @@ const routes: Array<RouteProps> = [
   },
   {
     path: '/',
+    exact: true,
     component: List
   },
   {

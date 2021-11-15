@@ -22,8 +22,8 @@ class App extends Component {
   
         <Router>
           <Switch>
-            {routes.map(({path, component}, key) => (
-              <Route key={key} path={path} component={component} /* children={<Child/>} *//>
+            {routes.map(({path, component, exact}, key) => (
+              <Route key={key} exact={exact} path={path} component={component} /* children={<Child/>} *//>
             ))}
           </Switch>
         </Router>
