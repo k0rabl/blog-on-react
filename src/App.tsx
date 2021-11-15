@@ -7,13 +7,11 @@ import {
   Route
 } from "react-router-dom"
 
-import Header from './components/header/Header'
-import Edit from './components/edit/Edit'
-// import Detail from './pages/detail/detail';
+import Header from './features/header/Header'
+import Edit from './features/edit/Edit'
 
 class App extends Component {
  
-
   render(){
     return (
       <div className="App">
@@ -23,24 +21,13 @@ class App extends Component {
         <Router>
           <Switch>
             {routes.map(({path, component, exact}, key) => (
-              <Route key={key} exact={exact} path={path} component={component} /* children={<Child/>} *//>
+              <Route key={key} exact={exact} path={path} component={component} />
             ))}
           </Switch>
         </Router>
       </div>
     )
   }
-  
 }
-
-// function Child() {
-//   // We can use the `useParams` hook here to access
-//   // // the dynamic pieces of the URL.
-//   // let { children } = useParams();
-
-//   return (
-//     <Detail/>
-//   );
-// }
 
 export default App;

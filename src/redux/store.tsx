@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
 
-import paginationSlice from "../components/pagination/PaginationSlice"
-import searchSlice from "../components/Search/SearchSlice"
-import modeSlice from "../components/edit/modeSlice"
+import paginationSlice from "../features/Pagination/PaginationSlice"
+import searchSlice from "../features/Article/ArticleSlice"
+import modeSlice from "../features/edit/modeSlice"
 
 export const store = configureStore({
   reducer: {

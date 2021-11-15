@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Article from '../../components/article/Article'
-import Pagination from '../../components/pagination/Pagination'
+import Article from '../../features/Article/component/Article'
+import Pagination from '../../features/Pagination/component/Pagination'
 import { IListProps, IListState } from './IList'
-import IArticle from '../../components/article/IArticle'
+import IArticle from '../../features/Article/component/IArticle'
 
 
 import { connect } from "react-redux"

@@ -1,4 +1,4 @@
-import IArticle from "../components/article/IArticle";
+import IArticle from "../features/Article/component/IArticle";
 
 const Articles: IArticle[] = [
   {
