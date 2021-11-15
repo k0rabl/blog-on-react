@@ -8,7 +8,6 @@ import {
 } from "react-router-dom"
 
 import Header from './features/header/Header'
-import Edit from './features/edit/Edit'
 
 class App extends Component {
  
@@ -16,7 +15,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header title='Blog'/>
-        <Edit />
   
         <Router>
           <Switch>

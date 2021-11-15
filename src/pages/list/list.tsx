@@ -7,6 +7,7 @@ import IArticle from '../../features/Article/component/IArticle'
 
 import { connect } from "react-redux"
 import { RootState } from '../../redux/store'
+import Edit from '../../features/edit/Edit'
 
 class List extends Component<IListProps, IListState>{
 
@@ -56,6 +57,8 @@ class List extends Component<IListProps, IListState>{
 
     return (
       <>
+      
+        <Edit />
         {articlesArr[active - 1]?.map((element, index) => <Article key={index} {...element}/>)}
         { 
           articlesArr.length > 1 && 

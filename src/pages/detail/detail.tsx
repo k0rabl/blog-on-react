@@ -3,6 +3,8 @@ import { withRouter } from "react-router"
 import Articles from '../../fixtures/Articles';
 import { Props, IState } from './IDetail';
 
+import './Detail.sass'
+
 
 class Detail extends Component<Props, IState> {
 
@@ -28,9 +30,9 @@ class Detail extends Component<Props, IState> {
     return(
       <div>
         <h1>{article.name}</h1>
-        <p>{article.desc}</p>
+        <p className="desc">{article.desc}</p>
         
-        <p>{article.date}</p>
+        <p className="date">{article.date}</p>
 
         <button  
           className="waves-effect waves-light redC-bg lighten-3 btn" 

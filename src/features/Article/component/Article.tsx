@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom'
 class Article extends Component<IArticle> {
 
   render() {
-    const { id, date, name, desc } = this.props
+    const { id, date, name, desc, isRead } = this.props
     
     return (
-      <Link to={`/${id}`}>
+      <Link to={`/${id}`} className="link articleLink">
         <div className="container article">
           <div className="top">
-            <div className="title">{name}</div>
+            <div className={`title ${isRead && 'read'}`}>{name}</div>
             <div className="date">{date}</div>
           </div>
           <div className="bottom">

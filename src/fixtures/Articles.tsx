@@ -8,7 +8,7 @@ const Articles: IArticle[] = [
     preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     image: {},
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
-    isRead: false
+    isRead: true
   },
   {
     id: 2,
