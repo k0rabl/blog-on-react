@@ -20,7 +20,7 @@ class Edit extends Component<IEditProps>{
       <div className={`editMode__container editMode__container${editMode ? '': '-user'}`}>
         <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={e => this.handleClick()}>
           <i className="material-icons left">edit</i>
-          Редактировать
+          Edit
         </button > 
       </div>
     )
@@ -29,11 +29,11 @@ class Edit extends Component<IEditProps>{
       <div className={`editMode__container editMode__container${editMode ? '-edit' : ''}`}>
         <button  className="waves-effect waves-light redC-bg lighten-3 btn">
           <i className="material-icons left">add</i>
-          Добавить статью
+          Add article
         </button > 
         <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={e => this.handleClick()}>
           <i className="material-icons left">close</i>
-          Выйти из редактора
+          Exit
         </button > 
       </div>
     )
