@@ -1,0 +1,21 @@
+.searchContainer
+  position: relative
+  input
+    color: #fff
+    padding-right: 20px
+    box-sizing: border-box
+    &:focus
+      color: #fff
+      background-color: transparent
+  .close
+    position: absolute
+    right: 0
+    top: 8px
+    cursor: pointer
+    display: none
+    background-color: #121B22
+    transition: color .2s
+    &:hover
+      color: #B94A3E
+    &.show
+      display: block
