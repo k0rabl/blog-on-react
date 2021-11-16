@@ -3,7 +3,7 @@ import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
 
 import './Detail.sass'
-import { handleRead, handleLocalStorage } from '../../features/Article/ArticleSlice';
+import { handleRead } from '../../features/Article/ArticleSlice';
 import { RootState } from '../../redux/store';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -31,7 +31,8 @@ class Detail extends Component<Props, IState> {
   }
 
   componentWillUnmount(){
-    handleLocalStorage()
+    localStorage.removeItem('Articles')
+    localStorage.setItem('Articles', JSON.stringify(this.props.articles))
   }
 
   render() {
@@ -58,7 +59,7 @@ const mapStateToProps = (state: RootState) => ({
   articles: state.search.filteredArticles
 })
 
-const mapDispatchToProps = { handleRead, handleLocalStorage }
+const mapDispatchToProps = { handleRead }
 
 
 export default compose<React.ComponentType<Props>>(

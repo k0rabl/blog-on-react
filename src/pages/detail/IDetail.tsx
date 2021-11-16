@@ -7,7 +7,6 @@ interface IProps {
 
 interface IReduxProps {
   articles: IArticle[]
-  handleLocalStorage: Function
   handleRead: Function
 }
 

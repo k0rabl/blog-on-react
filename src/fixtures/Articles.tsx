@@ -77,6 +77,7 @@ let Articles: IArticle[] = [
 ]
 
 const jsonLocalStorage = localStorage.getItem('Articles')
+console.log(jsonLocalStorage);
 
 if (jsonLocalStorage)
   Articles = JSON.parse(jsonLocalStorage)
