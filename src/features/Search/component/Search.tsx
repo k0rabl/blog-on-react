@@ -2,6 +2,7 @@ import React, { Component, ChangeEvent } from 'react'
 
 import { connect } from 'react-redux'
 import { ISearchProps, ISearchState } from './ISearch'
+import { setActive } from '../../Pagination/PaginationSlice'
 import { handleFilterString, handleDrop } from '../../Article/ArticleSlice'
 
 import './Search.sass'
@@ -17,9 +18,10 @@ class Search extends Component<ISearchProps, ISearchState>{
   }
 
   handleChange(e: ChangeEvent<HTMLInputElement>) {
-    const { handleFilterString } = this.props
+    const { handleFilterString, setActive } = this.props
 
     this.setState({searchValue: e.target.value })
+    setActive(1)
     handleFilterString(e.target.value)
   }
 
@@ -42,6 +44,6 @@ class Search extends Component<ISearchProps, ISearchState>{
 } 
 
 
-const mapDispatchToProps = { handleFilterString, handleDrop }
+const mapDispatchToProps = { handleFilterString, handleDrop, setActive }
 
 export default connect(null, mapDispatchToProps)(Search)

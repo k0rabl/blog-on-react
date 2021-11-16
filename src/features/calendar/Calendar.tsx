@@ -1,6 +1,7 @@
 import React, { ChangeEvent, Component } from 'react'
 import { connect } from 'react-redux'
 import {handleFilterDate, handleDrop} from '../Article/ArticleSlice'
+import { setActive } from '../Pagination/PaginationSlice'
 import { ICalendarProps, ICalendarState } from './ICalendar'
 
 import './Calendar.sass'
@@ -11,6 +12,7 @@ class Calendar extends Component<ICalendarProps, ICalendarState>{
     const { handleFilterDate } = this.props
 
     this.setState({dateValue: e.target.value })
+    setActive(1)
     handleFilterDate(e.target.value)
   }
 
@@ -24,6 +26,6 @@ class Calendar extends Component<ICalendarProps, ICalendarState>{
   }
 } 
 
-const mapDispatchToProps = { handleFilterDate, handleDrop }
+const mapDispatchToProps = { handleFilterDate, handleDrop, setActive }
 
 export default connect(null, mapDispatchToProps)(Calendar)
