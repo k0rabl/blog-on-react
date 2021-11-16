@@ -1,6 +1,6 @@
 import IArticle from "../features/Article/component/IArticle";
 
-const Articles: IArticle[] = [
+let Articles: IArticle[] = [
   {
     id: 1,
     date: '2021-05-20',
@@ -75,5 +75,12 @@ const Articles: IArticle[] = [
     isRead: false
   }
 ]
+
+const jsonLocalStorage = localStorage.getItem('Articles')
+
+if (jsonLocalStorage)
+  Articles = JSON.parse(jsonLocalStorage)
+else
+  localStorage.setItem('Articles', JSON.stringify(Articles))
 
 export default Articles

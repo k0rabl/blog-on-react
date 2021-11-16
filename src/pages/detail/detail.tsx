@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { withRouter } from "react-router"
-import Articles from '../../fixtures/Articles';
 import { Props, IState } from './IDetail';
 
 import './Detail.sass'
+import { handleRead, handleLocalStorage } from '../../features/Article/ArticleSlice';
+import { RootState } from '../../redux/store';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
 
 class Detail extends Component<Props, IState> {
@@ -12,18 +15,24 @@ class Detail extends Component<Props, IState> {
     super(props)
 
     this.state = {
-      article: Articles[0] // TODO:  Question! Don't forget!
+      article: this.props.articles[0] // TODO:  Question! Don't forget!
     }
   }
 
   componentDidMount(){
     const { id } = this.props.match.params
+    const { articles, handleRead } = this.props
 
-    Articles.forEach(element => {
+    articles.forEach(element => {
       element?.id === Number(id) && this.setState({article: element})
     })
+
+    handleRead(Number(id))
   }
 
+  componentWillUnmount(){
+    handleLocalStorage()
+  }
 
   render() {
     const { article } = this.state   
@@ -31,7 +40,6 @@ class Detail extends Component<Props, IState> {
       <div>
         <h1>{article.name}</h1>
         <p className="desc">{article.desc}</p>
-        
         <p className="date">{article.date}</p>
 
         <button  
@@ -45,4 +53,15 @@ class Detail extends Component<Props, IState> {
   }
 }
 
-export default withRouter(Detail)
+
+const mapStateToProps = (state: RootState) => ({
+  articles: state.search.filteredArticles
+})
+
+const mapDispatchToProps = { handleRead, handleLocalStorage }
+
+
+export default compose<React.ComponentType<Props>>(
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps)
+)(Detail)

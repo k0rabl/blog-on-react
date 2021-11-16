@@ -26,9 +26,19 @@ export const searchSlice = createSlice({
     },
     handleDrop: state => {
       state.filteredArticles = Articles
+    },
+    handleRead: (state, action: PayloadAction<number>) => {
+      state.filteredArticles =  state.filteredArticles.map((element: IArticle) => ({
+        ...element,
+        isRead: element.id === action.payload ? true : element.isRead
+      }))
+    },
+    handleLocalStorage: state => {   
+      localStorage.removeItem('Articles')
+      localStorage.setItem('Articles', JSON.stringify(state.filteredArticles))
     }
   },
 })
 
-export const { handleFilterString, handleFilterDate, handleDrop } = searchSlice.actions
+export const { handleFilterString, handleFilterDate, handleDrop, handleRead, handleLocalStorage } = searchSlice.actions
 export default searchSlice.reducer

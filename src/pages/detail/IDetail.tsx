@@ -5,8 +5,14 @@ interface IProps {
   id: string
 }
 
+interface IReduxProps {
+  articles: IArticle[]
+  handleLocalStorage: Function
+  handleRead: Function
+}
+
 export interface IState {
   article: IArticle
 }
 
-export type Props = RouteComponentProps<IProps>;
+export type Props = RouteComponentProps<IProps> & IReduxProps;
