@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
 
@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 
-class Detail extends Component<Props, IState> {
+class Detail extends PureComponent<Props, IState> {
 
   constructor(props: Props){
     super(props)

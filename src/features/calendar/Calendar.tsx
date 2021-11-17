@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Component } from 'react'
+import React, { ChangeEvent, PureComponent } from 'react'
 import { connect } from 'react-redux'
 import {handleFilterDate, handleDrop} from '../Article/ArticleSlice'
 import { setActive } from '../Pagination/PaginationSlice'
@@ -6,7 +6,7 @@ import { ICalendarProps, ICalendarState } from './ICalendar'
 
 import './Calendar.sass'
 
-class Calendar extends Component<ICalendarProps, ICalendarState>{
+class Calendar extends PureComponent<ICalendarProps, ICalendarState>{
   
   handleChange(e: ChangeEvent<HTMLInputElement>) {
     const { handleFilterDate } = this.props

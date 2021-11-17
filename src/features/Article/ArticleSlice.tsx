@@ -32,9 +32,14 @@ export const searchSlice = createSlice({
         ...element,
         isRead: element.id === action.payload ? true : element.isRead
       }))
+    },
+    handleDeleteElement: (state, action: PayloadAction<number>) => {
+      state.filteredArticles = state.filteredArticles.filter(element => {
+        return element.id !== action.payload
+      })
     }
   },
 })
 
-export const { handleFilterString, handleFilterDate, handleDrop, handleRead } = searchSlice.actions
+export const { handleFilterString, handleFilterDate, handleDrop, handleRead, handleDeleteElement } = searchSlice.actions
 export default searchSlice.reducer

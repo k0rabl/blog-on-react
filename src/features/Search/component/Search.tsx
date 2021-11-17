@@ -1,4 +1,4 @@
-import React, { Component, ChangeEvent } from 'react'
+import React, { PureComponent, ChangeEvent } from 'react'
 
 import { connect } from 'react-redux'
 import { ISearchProps, ISearchState } from './ISearch'
@@ -7,7 +7,7 @@ import { handleFilterString, handleDrop } from '../../Article/ArticleSlice'
 
 import './Search.sass'
 
-class Search extends Component<ISearchProps, ISearchState>{
+class Search extends PureComponent<ISearchProps, ISearchState>{
 
   constructor(props: ISearchProps){
     super(props)

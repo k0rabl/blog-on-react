@@ -59,7 +59,7 @@ class List extends Component<IListProps, IListState>{
       <>
       
         <Edit />
-        {articlesArr[active - 1]?.map((element, index) => <Article key={index} {...element}/>)}
+        {articlesArr[active - 1]?.map(element => <Article key={element.id} {...element}/>)}
         { 
           articlesArr.length > 1 && 
           <Pagination amount={articlesArr.length}/>

@@ -9,13 +9,18 @@
     margin-bottom: 15px
     display: flex
     justify-content: space-between
-    .title
-      font-size: 26px
-      color: #b10303
-      transition: color .2s
-      &.read
-        color: #B94A3E
-  &:hover
-    .top
-       .title
+    &-left
+      display: flex
+      align-items: center
+      .title
+        margin-right: 15px
+        font-size: 26px
+        color: #b10303
+        transition: color .2s
+        &.read
+          color: #B94A3E
+        &:hover
           color: #742c24
+      .btn
+        &-delete
+          margin-right: 15px

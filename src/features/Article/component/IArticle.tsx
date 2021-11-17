@@ -7,3 +7,11 @@ export default interface IArticle {
   isRead: Boolean
   date: string
 }
+
+interface IProps {
+  editMode?: Boolean
+  articles: IArticle[]
+  handleDeleteElement: Function
+}
+
+export type ArticleProps = IArticle & IProps

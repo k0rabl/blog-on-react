@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { handleMode } from './modeSlice'
 import { IEditProps } from './IEdit'
@@ -6,10 +6,10 @@ import { IEditProps } from './IEdit'
 import './Edit.sass'
 import { RootState } from '../../redux/store'
 
-class Edit extends Component<IEditProps>{
+class Edit extends PureComponent<IEditProps>{
   
-  handleClick() {
-    const { handleMode} = this.props  
+  handleClick = () => {
+    const { handleMode } = this.props  
 
     handleMode()
   }
@@ -18,7 +18,7 @@ class Edit extends Component<IEditProps>{
     const { editMode } = this.props
     const user = (
       <div className={`editMode__container editMode__container${editMode ? '': '-user'}`}>
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={e => this.handleClick()}>
+        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleClick}>
           <i className="material-icons left">edit</i>
           Edit
         </button > 
@@ -31,7 +31,7 @@ class Edit extends Component<IEditProps>{
           <i className="material-icons left">add</i>
           Add article
         </button > 
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={e => this.handleClick()}>
+        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleClick}>
           <i className="material-icons left">close</i>
           Exit
         </button > 
