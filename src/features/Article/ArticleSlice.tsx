@@ -45,6 +45,9 @@ export const searchSlice = createSlice({
 
         return element
       })
+    },
+    handleAddElement: (state, action: PayloadAction<IArticle>) => {
+      state.filteredArticles.push(action.payload)
     }
   },
 })
@@ -55,6 +58,7 @@ export const {
   handleDrop, 
   handleRead, 
   handleDeleteElement,
-  handleEditElement
+  handleEditElement,
+  handleAddElement
 } = searchSlice.actions
 export default searchSlice.reducer

@@ -10,6 +10,7 @@ interface IReduxProps {
   editMode: Boolean
   handleRead: Function
   handleEditElement: Function
+  handleAddElement: Function
 }
 
 export interface IState {

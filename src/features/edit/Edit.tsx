@@ -5,6 +5,7 @@ import { IEditProps } from './IEdit'
 
 import './Edit.sass'
 import { RootState } from '../../redux/store'
+import { Link } from 'react-router-dom'
 
 class Edit extends PureComponent<IEditProps>{
   
@@ -27,10 +28,10 @@ class Edit extends PureComponent<IEditProps>{
 
     const edit = (
       <div className={`editMode__container editMode__container${editMode ? '-edit' : ''}`}>
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn">
+        <Link to='/add' className="waves-effect waves-light redC-bg lighten-3 btn">
           <i className="material-icons left">add</i>
           Add article
-        </button > 
+        </Link > 
         <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleClick}>
           <i className="material-icons left">close</i>
           Exit

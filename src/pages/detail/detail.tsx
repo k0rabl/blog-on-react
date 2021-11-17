@@ -1,13 +1,15 @@
 import React, { ChangeEvent, PureComponent } from 'react'
 import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
+import IArticle from "../../features/Article/component/IArticle";
 
 import './Detail.sass'
-import { handleRead, handleEditElement } from '../../features/Article/ArticleSlice';
+import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice';
 import { RootState } from '../../redux/store';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
+const today = new Date()
 
 class Detail extends PureComponent<Props, IState> {
 
@@ -15,13 +17,31 @@ class Detail extends PureComponent<Props, IState> {
     super(props)
 
     this.state = {
-      article: this.props.articles[0] // TODO:  Question! Don't forget!
+      article: {
+        id: NaN,
+        name: '',
+        image: {},
+        preview: '',
+        desc: '',
+        isRead: false,
+        date: today.toDateString()
+      }
     }
   }
 
   componentDidMount(){
+    const { article } = this.state
     const { id } = this.props.match.params
     const { articles, handleRead } = this.props
+
+    if (!article.id){
+      return this.setState({
+        article: {
+          ...article,
+          id: articles[articles.length-1].id + 1
+        }
+      })
+    }
 
     articles.forEach(element => {
       element?.id === Number(id) && this.setState({article: element})
@@ -48,10 +68,11 @@ class Detail extends PureComponent<Props, IState> {
 
   handleSave = () => {
     const { article } = this.state
-    const { handleEditElement, history } = this.props
+    const { handleEditElement, handleAddElement, history, articles } = this.props
 
-    
-    handleEditElement(article)
+    articles.filter(element => element.id === article.id)
+      ? handleAddElement(article)
+      : handleEditElement(article)
     history.goBack()
   }
 
@@ -104,7 +125,7 @@ const mapStateToProps = (state: RootState) => ({
   editMode: state.edit.editMode
 })
 
-const mapDispatchToProps = { handleRead, handleEditElement }
+const mapDispatchToProps = { handleRead, handleEditElement, handleAddElement }
 
 
 export default compose<React.ComponentType<Props>>(

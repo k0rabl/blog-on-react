@@ -16,7 +16,6 @@ const routes: Array<RouteProps> = [
     path: '/:id',
     component: Detail
   }
-
 ]
 
 export default routes
