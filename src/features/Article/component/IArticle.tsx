@@ -1,9 +1,9 @@
 export default interface IArticle {
   id: number
-  name: String
+  name: string
   image?: Object
-  preview?: String
-  desc: String
+  preview?: string
+  desc: string
   isRead: Boolean
   date: string
 }

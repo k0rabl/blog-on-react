@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { ChangeEvent, PureComponent } from 'react'
 import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
 
 import './Detail.sass'
-import { handleRead } from '../../features/Article/ArticleSlice';
+import { handleRead, handleEditElement } from '../../features/Article/ArticleSlice';
 import { RootState } from '../../redux/store';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -35,20 +35,64 @@ class Detail extends PureComponent<Props, IState> {
     localStorage.setItem('Articles', JSON.stringify(this.props.articles))
   }
 
-  render() {
-    const { article } = this.state   
-    return(
-      <div>
-        <h1>{article.name}</h1>
-        <p className="desc">{article.desc}</p>
-        <p className="date">{article.date}</p>
+  handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { article } = this.state 
 
-        <button  
-          className="waves-effect waves-light redC-bg lighten-3 btn" 
-          onClick={() => this.props.history.goBack()}
-        >
-          Back
-        </button > 
+    this.setState({
+      article: {
+        ...article,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
+
+  handleSave = () => {
+    const { article } = this.state
+    const { handleEditElement, history } = this.props
+
+    
+    handleEditElement(article)
+    history.goBack()
+  }
+
+  render() {
+    const { article: {name, desc, date} } = this.state   
+    const { editMode } = this.props
+    return(
+      <div className="detail">
+        {
+          editMode  
+            ? <>              
+              <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>
+              <textarea className="input input__desc" name="desc" value={desc} onChange={this.handleChange}/>
+            </> 
+            : <>
+              <h1>{name}</h1>
+              <p className="desc">{desc}</p>
+            </>
+        }
+
+        <p className="date">{date}</p>
+
+        <div className="buttons">
+         
+          <button  
+            className="waves-effect waves-light redC lighten-3 btn button-second" 
+            onClick={this.props.history.goBack}
+          >
+            Back
+          </button >
+
+          {editMode && 
+            <button  
+              className="waves-effect waves-light redC-bg lighten-3 btn button-primary" 
+              onClick={this.handleSave}
+            >
+              Save
+            </button > 
+          } 
+        </div>
+       
       </div>
     )
   }
@@ -56,10 +100,11 @@ class Detail extends PureComponent<Props, IState> {
 
 
 const mapStateToProps = (state: RootState) => ({
-  articles: state.search.filteredArticles
+  articles: state.search.filteredArticles,
+  editMode: state.edit.editMode
 })
 
-const mapDispatchToProps = { handleRead }
+const mapDispatchToProps = { handleRead, handleEditElement }
 
 
 export default compose<React.ComponentType<Props>>(

@@ -7,7 +7,9 @@ interface IProps {
 
 interface IReduxProps {
   articles: IArticle[]
+  editMode: Boolean
   handleRead: Function
+  handleEditElement: Function
 }
 
 export interface IState {
