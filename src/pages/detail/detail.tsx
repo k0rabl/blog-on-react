@@ -33,15 +33,15 @@ class Detail extends PureComponent<Props, IState> {
     const { article } = this.state
     const { id } = this.props.match.params
     const { articles, handleRead } = this.props
-
-    if (!article.id){
+  
+    if (!id)
       return this.setState({
         article: {
           ...article,
           id: articles[articles.length-1].id + 1
         }
       })
-    }
+    
 
     articles.forEach(element => {
       element?.id === Number(id) && this.setState({article: element})
