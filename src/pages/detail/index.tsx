@@ -1,4 +1,4 @@
-import React, { ChangeEvent, PureComponent } from 'react'
+import React, { ChangeEvent, Component } from 'react'
 import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
 import IArticle from "../../features/Article/component/IArticle";
@@ -11,7 +11,7 @@ import { compose } from 'redux';
 
 const today = new Date()
 
-class Detail extends PureComponent<Props, IState> {
+class Detail extends Component<Props, IState> {
 
   constructor(props: Props){
     super(props)
