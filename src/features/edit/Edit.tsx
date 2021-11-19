@@ -1,18 +1,33 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { handleMode } from './modeSlice'
-import { IEditProps } from './IEdit'
+import { IEditProps, IEditState } from './IEdit'
 
 import './Edit.sass'
 import { RootState } from '../../redux/store'
 import { Link } from 'react-router-dom'
+import { Modal } from '../Modal'
 
-class Edit extends PureComponent<IEditProps>{
+class Edit extends PureComponent<IEditProps, IEditState>{
+
+  constructor(props: IEditProps){
+    super(props);
+
+    this.state = {
+      opened: false
+    }
+  }
   
   handleClick = () => {
     const { handleMode } = this.props  
 
     handleMode()
+    this.setState({opened: false})
+  }
+
+  handleShowModal = () => {
+    const { opened } = this.state
+    this.setState({opened: !opened})
   }
 
   render() {
@@ -32,14 +47,24 @@ class Edit extends PureComponent<IEditProps>{
           <i className="material-icons left">add</i>
           Add article
         </Link > 
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleClick}>
+        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleShowModal}>
           <i className="material-icons left">close</i>
           Exit
         </button > 
       </div>
     )
 
-    return editMode ? edit : user
+    return (
+      <>
+        {editMode ? edit : user}
+        <Modal 
+          opened={this.state.opened}
+          onClose={this.handleShowModal} 
+          onAccept={this.handleClick} 
+          type='edit'
+        />
+      </>
+    )
   }
 } 
 
