@@ -7,3 +7,4 @@ export interface ISearchProps {
 export interface ISearchState {
   searchValue: string
 }
+

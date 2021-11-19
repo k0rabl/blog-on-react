@@ -35,7 +35,7 @@ class Article extends PureComponent<ArticleProps> {
           <div className="top-left">
             
             <Link to={`/${id}`} className="link articleLink">
-              <div className={`title ${isRead && 'read'}`}>{name}</div>
+              <div className={`title ${isRead && 'read'} ${editMode && 'edit'}`}>{name}</div>
             </Link>
             
             {editMode && 
