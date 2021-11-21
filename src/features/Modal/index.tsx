@@ -32,7 +32,7 @@ export const Modal = ({onAccept, onClose, type, opened}: IProps ) => {
                 onClick={() => handleClick('accept')}
                 className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
             >
-                Exit
+                {type === 'delete' ? 'Delete' : 'Exit'}
             </button>
         </div>    
       </div>

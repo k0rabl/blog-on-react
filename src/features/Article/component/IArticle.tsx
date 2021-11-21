@@ -8,6 +8,10 @@ export default interface IArticle {
   date: string
 }
 
+export interface IState {
+  opened: Boolean
+}
+
 interface IProps {
   editMode?: Boolean
   articles: IArticle[]

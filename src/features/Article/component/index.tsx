@@ -1,22 +1,35 @@
 import React, { PureComponent } from 'react'
-import { ArticleProps } from './IArticle'
+import { ArticleProps, IState } from './IArticle'
 
 import './Article.sass'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { RootState } from '../../../redux/store'
 import { handleDeleteElement } from '../ArticleSlice'
+import { Modal } from '../../Modal'
 
-class Article extends PureComponent<ArticleProps> {
+class Article extends PureComponent<ArticleProps, IState> {
+
+  constructor(props: ArticleProps){
+    super(props)
+
+    this.state = {
+      opened: false
+    }
+  }
 
   handleDelete = () => {
-    const {id, handleDeleteElement, articles} = this.props
+    const { id, handleDeleteElement } = this.props
     
-    //TODO:don't delete last elemnt
     handleDeleteElement(Number(id))
-    
-    localStorage.removeItem('Articles')
-    localStorage.setItem('Articles', JSON.stringify(articles))
+    this.setState({opened: false})
+  }
+
+
+
+  handleShowModal = () => {
+    const { opened } = this.state
+    this.setState({opened: !opened})
   }
 
   render() {
@@ -40,13 +53,13 @@ class Article extends PureComponent<ArticleProps> {
             
             {editMode && 
               <div className="buttons">
-                <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-delete" onClick={this.handleDelete}>
+                <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-delete" onClick={this.handleShowModal}>
                   <i className="material-icons center">delete</i>
                 </button > 
                 
-                <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-edit" onClick={() => console.log('edit')}>
+                {/* <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-edit" onClick={() => console.log('edit')}>
                   <i className="material-icons center">edit</i>
-                </button > 
+                </button > */} 
               </div>
             }
           </div>
@@ -57,6 +70,12 @@ class Article extends PureComponent<ArticleProps> {
           <div className="image"></div>
           <div className="descr">{desc}</div>
         </div>
+        <Modal 
+          opened={this.state.opened}
+          onClose={this.handleShowModal} 
+          onAccept={this.handleDelete} 
+          type='delete'
+        />
       </div>
     )
   }

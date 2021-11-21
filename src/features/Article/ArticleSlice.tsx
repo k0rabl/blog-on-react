@@ -10,7 +10,7 @@ const initialState: PaginationState = {
   filteredArticles: Articles
 }
 
-export const searchSlice = createSlice({
+export const articlesSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
@@ -48,8 +48,12 @@ export const searchSlice = createSlice({
     },
     handleAddElement: (state, action: PayloadAction<IArticle>) => {
       state.filteredArticles.push(action.payload)
+    },
+    handleRebuildStorage: (state, action: PayloadAction<IArticle[]>) => {  
+      localStorage.removeItem('Articles')
+      localStorage.setItem('Articles', JSON.stringify(action.payload))
     }
-  },
+  }
 })
 
 export const { 
@@ -60,5 +64,5 @@ export const {
   handleDeleteElement,
   handleEditElement,
   handleAddElement
-} = searchSlice.actions
-export default searchSlice.reducer
+} = articlesSlice.actions
+export default articlesSlice.reducer

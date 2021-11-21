@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Article from '../../features/Article/component/Article'
+import Article from '../../features/Article/component'
 import Pagination from '../../features/Pagination/component/Pagination'
 import { IListProps, IListState } from './IList'
 import IArticle from '../../features/Article/component/IArticle'
@@ -7,7 +7,7 @@ import IArticle from '../../features/Article/component/IArticle'
 
 import { connect } from "react-redux"
 import { RootState } from '../../redux/store'
-import Edit from '../../features/edit/Edit'
+import Edit from '../../features/edit'
 
 class List extends Component<IListProps, IListState>{
 

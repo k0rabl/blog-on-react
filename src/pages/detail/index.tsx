@@ -1,7 +1,6 @@
 import React, { ChangeEvent, Component } from 'react'
 import { withRouter } from "react-router"
 import { Props, IState } from './IDetail';
-import IArticle from "../../features/Article/component/IArticle";
 
 import './Detail.sass'
 import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice';
@@ -50,11 +49,6 @@ class Detail extends Component<Props, IState> {
     handleRead(Number(id))
   }
 
-  componentWillUnmount(){
-    localStorage.removeItem('Articles')
-    localStorage.setItem('Articles', JSON.stringify(this.props.articles))
-  }
-
   handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { article } = this.state 
 
@@ -68,11 +62,11 @@ class Detail extends Component<Props, IState> {
 
   handleSave = () => {
     const { article } = this.state
-    const { handleEditElement, handleAddElement, history, articles } = this.props
+    const { handleEditElement, handleAddElement, history, articles } = this.props  
 
     articles.filter(element => element.id === article.id)
-      ? handleAddElement(article)
-      : handleEditElement(article)
+      ? handleEditElement(article)
+      : handleAddElement(article)
     history.goBack()
   }
 

@@ -76,11 +76,4 @@ let Articles: IArticle[] = [
   }
 ]
 
-const jsonLocalStorage = localStorage.getItem('Articles')
-
-if (jsonLocalStorage)
-  Articles = JSON.parse(jsonLocalStorage)
-else
-  localStorage.setItem('Articles', JSON.stringify(Articles))
-
 export default Articles
