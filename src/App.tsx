@@ -7,22 +7,31 @@ import {
   Route
 } from "react-router-dom"
 
+import { AlertProvider } from './AlertContext'
+
 import Header from './features/header/Header'
+import { Alert } from './features/Alert'
+
 
 class App extends Component {
+  
+
   render(){
     return (
-      <div className="App">
-        <Header title='Blog'/>
-  
-        <Router>
-          <Switch>
-            {routes.map(({path, component, exact}, key) => (
-              <Route key={key} exact={exact} path={path} component={component} />
-            ))}
-          </Switch>
-        </Router>
-      </div>
+      <AlertProvider >
+        <div className="App">
+          <Alert />
+          <Header title='Blog'/>
+    
+          <Router>
+            <Switch>
+              {routes.map(({path, component, exact}, key) => (
+                <Route key={key} exact={exact} path={path} component={component} />
+              ))}
+            </Switch>
+          </Router>
+        </div>
+      </AlertProvider>
     )
   }
 }
