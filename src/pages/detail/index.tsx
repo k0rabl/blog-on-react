@@ -10,6 +10,8 @@ import { compose } from 'redux';
 
 const today = new Date()
 
+
+
 class Detail extends Component<Props, IState> {
 
   constructor(props: Props){
@@ -19,13 +21,29 @@ class Detail extends Component<Props, IState> {
       article: {
         id: NaN,
         name: '',
-        image: {},
+        image: '',
         preview: '',
         desc: '',
         isRead: false,
         date: today.toDateString()
       }
     }
+  }
+
+  getBase64(file?: File, cb?: Function) {
+
+    if (!file || !cb) return false
+
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+        cb(reader.result)
+    };
+
+    reader.onerror = function (error) {
+        console.log('Error: ', error);
+    };
+
   }
 
   componentDidMount(){
@@ -49,7 +67,21 @@ class Detail extends Component<Props, IState> {
     handleRead(Number(id))
   }
 
-  handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  handleAddFile = (event: ChangeEvent<HTMLInputElement>) => {
+    const { article } = this.state 
+
+    this.getBase64(event.target.files?.[0], (result: string) => {
+         this.setState({
+          article: {
+            ...article,
+            image: result
+          }
+        })
+    });
+  }
+
+
+  handleChange = (event: ChangeEvent<HTMLTextAreaElement & HTMLInputElement>) => {
     const { article } = this.state 
 
     this.setState({
@@ -71,18 +103,22 @@ class Detail extends Component<Props, IState> {
   }
 
   render() {
-    const { article: {name, desc, date} } = this.state   
+    const { article: {name, desc, date, image} } = this.state   
     const { editMode } = this.props
     return(
       <div className="detail">
         {
           editMode  
-            ? <>              
+            ? <>        
+              <input type="file" name="image"  onChange={this.handleAddFile}/>      
+              
+              <img src={image} alt="" />
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>
               <textarea className="input input__desc" name="desc" value={desc} onChange={this.handleChange}/>
             </> 
             : <>
               <h1>{name}</h1>
+              <img src={image} alt="" />
               <p className="desc">{desc}</p>
             </>
         }

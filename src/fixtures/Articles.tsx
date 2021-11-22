@@ -6,7 +6,7 @@ let Articles: IArticle[] = [
     date: '2021-05-20',
     name: 'How to use hooks in React?',
     preview: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: true
   },
@@ -14,7 +14,7 @@ let Articles: IArticle[] = [
     id: 2,
     date: '2021-05-20',
     name: 'How to use hooks in React? (||)',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -22,7 +22,7 @@ let Articles: IArticle[] = [
     id: 3,
     date: '2021-05-20',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -30,7 +30,7 @@ let Articles: IArticle[] = [
     id: 4,
     date: '2021-04-30',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -38,7 +38,7 @@ let Articles: IArticle[] = [
     id: 5,
     date: '2021-11-14',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -46,7 +46,7 @@ let Articles: IArticle[] = [
     id: 6,
     date: '2021-05-20',
     name: 'second page',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -54,7 +54,7 @@ let Articles: IArticle[] = [
     id: 7,
     date: '2021-05-20',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -62,7 +62,7 @@ let Articles: IArticle[] = [
     id: 8,
     date: '2021-05-20',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   },
@@ -70,7 +70,7 @@ let Articles: IArticle[] = [
     id: 9,
     date: '2021-05-20',
     name: 'How to use hooks in React?',
-    image: {},
+    image: '',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.',
     isRead: false
   }
