@@ -7,8 +7,10 @@ import { connect } from 'react-redux'
 import { RootState } from '../../../redux/store'
 import { handleDeleteElement } from '../ArticleSlice'
 import { Modal } from '../../Modal'
+import AlertContext from '../../../AlertContext'
 
 class Article extends PureComponent<ArticleProps, IState> {
+  static contextType = AlertContext
 
   constructor(props: ArticleProps){
     super(props)
@@ -19,9 +21,13 @@ class Article extends PureComponent<ArticleProps, IState> {
   }
 
   handleDelete = () => {
+    const { setOpen, setType } = this.context 
     const { id, handleDeleteElement } = this.props
     
     handleDeleteElement(Number(id))
+    
+    setOpen(true)
+    setType('Delete')
     this.setState({opened: false})
   }
 

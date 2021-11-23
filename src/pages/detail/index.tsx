@@ -7,12 +7,14 @@ import { handleRead, handleEditElement, handleAddElement } from '../../features/
 import { RootState } from '../../redux/store';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import AlertContext from '../../AlertContext';
 
 const today = new Date()
 
 
 
 class Detail extends Component<Props, IState> {
+  static contextType = AlertContext
 
   constructor(props: Props){
     super(props)
@@ -100,17 +102,23 @@ class Detail extends Component<Props, IState> {
 
   handleSave = () => {
     const { article } = this.state
-    const { handleEditElement, handleAddElement, history, articles } = this.props  
+    const { handleEditElement, handleAddElement, history, articles } = this.props 
+    const { setOpen, setType } = this.context 
 
     articles.filter(element => element.id === article.id)
       ? handleEditElement(article)
-      : handleAddElement(article)
+      : handleAddElement(article)   
+
+    setOpen(true)
+    setType('edit')
+      
     history.goBack()
   }
 
   render() {
     const { article: {name, desc, date, image} } = this.state   
     const { editMode } = this.props
+
     return(
       <div className="detail">
         {
