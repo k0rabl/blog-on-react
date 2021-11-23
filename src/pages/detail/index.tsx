@@ -7,7 +7,7 @@ import { handleRead, handleEditElement, handleAddElement } from '../../features/
 import { RootState } from '../../redux/store';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import AlertContext from '../../AlertContext';
+import AlertContext from '../../Context/AlertContext';
 
 const today = new Date()
 

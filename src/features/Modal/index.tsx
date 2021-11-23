@@ -1,17 +1,16 @@
-import { IProps } from "./IModal"
-
+import { useContext } from 'react'
+import ModalContext from '../../Context/ModalContext'
 import './Modal.sass'
 
-export const Modal = ({onAccept, onClose, type, opened}: IProps ) => {
-  
+export const Modal = () => {
+  const {isOpen, type, setOpen, handler} = useContext(ModalContext)
+
   const handleClick = (type: string) => {
-    type === 'close'
-      ? onClose()
-      : onAccept()
+    type === 'close' ? setOpen(false) : handler()
   }
 
   return(
-    <div className={`modalC ${opened && 'opened'}`}>
+    <div className={`modalC ${isOpen && 'opened'}`}>
       <div className="modalC__content">
         <h6 className="modalC__title">{type === 'delete' ? 'Delete' : 'Exit'}</h6>
         <p className="modalC__text">

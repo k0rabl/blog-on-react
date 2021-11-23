@@ -6,36 +6,32 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { RootState } from '../../../redux/store'
 import { handleDeleteElement } from '../ArticleSlice'
-import { Modal } from '../../Modal'
-import AlertContext from '../../../AlertContext'
+
+// import AlertContext from '../../../Context/AlertContext'
+import ModalContext from '../../../Context/ModalContext'
 
 class Article extends PureComponent<ArticleProps, IState> {
-  static contextType = AlertContext
-
-  constructor(props: ArticleProps){
-    super(props)
-
-    this.state = {
-      opened: false
-    }
-  }
+  static contextType = ModalContext /* AlertContext */ 
 
   handleDelete = () => {
-    const { setOpen, setType } = this.context 
+    const { setOpen } = this.context 
     const { id, handleDeleteElement } = this.props
-    
+
+    setOpen(false)
     handleDeleteElement(Number(id))
-    
-    setOpen(true)
-    setType('Delete')
-    this.setState({opened: false})
   }
 
-
-
   handleShowModal = () => {
-    const { opened } = this.state
-    this.setState({opened: !opened})
+    const { setOpen, setType, setHandler } = this.context 
+    
+    setOpen(true)
+    setType('delete')
+    setHandler(this.handleDelete)
+  }
+
+  componentDidMount() {
+    const { setType } = this.context 
+    setType('delete')
   }
 
   render() {
@@ -76,12 +72,6 @@ class Article extends PureComponent<ArticleProps, IState> {
           <div className="image"></div>
           <div className="descr">{desc}</div>
         </div>
-        <Modal 
-          opened={this.state.opened}
-          onClose={this.handleShowModal} 
-          onAccept={this.handleDelete} 
-          type='delete'
-        />
       </div>
     )
   }

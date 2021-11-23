@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import AlertContext from '../../AlertContext'
+import AlertContext from '../../Context/AlertContext'
 
 import './Alert.sass'
 

@@ -6,28 +6,25 @@ import { IEditProps, IEditState } from './IEdit'
 import './Edit.sass'
 import { RootState } from '../../redux/store'
 import { Link } from 'react-router-dom'
-import { Modal } from '../Modal'
+import ModalContext from '../../Context/ModalContext'
 
 class Edit extends PureComponent<IEditProps, IEditState>{
+  static contextType = ModalContext  
 
-  constructor(props: IEditProps){
-    super(props);
-
-    this.state = {
-      opened: false
-    }
-  }
-  
   handleClick = () => {
     const { handleMode } = this.props  
+    const { setOpen } = this.context 
 
+    setOpen(false)
     handleMode()
-    this.setState({opened: false})
   }
 
-  handleShowModal = () => {
-    const { opened } = this.state
-    this.setState({opened: !opened})
+  handleShowModal = () => { 
+    const { setOpen, setHandler, setType } = this.context 
+
+    setOpen(true)
+    setType('edit')
+    setHandler(this.handleClick)
   }
 
   render() {
@@ -57,12 +54,6 @@ class Edit extends PureComponent<IEditProps, IEditState>{
     return (
       <>
         {editMode ? edit : user}
-        <Modal 
-          opened={this.state.opened}
-          onClose={this.handleShowModal} 
-          onAccept={this.handleClick} 
-          type='edit'
-        />
       </>
     )
   }
