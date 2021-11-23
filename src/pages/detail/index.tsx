@@ -33,14 +33,7 @@ class Detail extends Component<Props, IState> {
   }
 
   getBase64(file?: File, cb?: Function) {
-
     if (!file || !cb) return false
-
-    if (file.size > 500000) {
-      console.error('File size > 500kb');
-      return false
-      // TODO: Add alert
-    } 
     
     let reader = new FileReader();
     reader.readAsDataURL(file);
@@ -77,8 +70,18 @@ class Detail extends Component<Props, IState> {
 
   handleAddFile = (event: ChangeEvent<HTMLInputElement>) => {
     const { article } = this.state 
+    const file = event.target.files?.[0]
+    
+    if (file && file.size > 500000) {
+      const { setOpen, setType } = this.context 
+      
+      setOpen(true)
+      setType('FIle size is over 500kb, please try less file size')
 
-    this.getBase64(event.target.files?.[0], (result: string) => {
+      return false
+    } 
+
+    this.getBase64(file, (result: string) => {
          this.setState({
           article: {
             ...article,
@@ -110,7 +113,7 @@ class Detail extends Component<Props, IState> {
       : handleAddElement(article)   
 
     setOpen(true)
-    setType('edit')
+    setType('Lsiting is edit!')
       
     history.goBack()
   }
@@ -124,15 +127,16 @@ class Detail extends Component<Props, IState> {
         {
           editMode  
             ? <>        
-              <input type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
-              
-              <img src={image} alt="" />
+              <div className="addImage">
+                <input type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
+                <img src={image} alt="" />
+              </div>
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>
               <textarea className="input input__desc" name="desc" value={desc} onChange={this.handleChange}/>
             </> 
             : <>
               <h1>{name}</h1>
-              <img src={image} alt="" />
+              <img className="showImage" src={image} alt="" />
               <p className="desc">{desc}</p>
             </>
         }
@@ -142,7 +146,7 @@ class Detail extends Component<Props, IState> {
         <div className="buttons">
          
           <button  
-            className="waves-effect waves-light redC lighten-3 btn button-second" 
+            className="waves-effect waves-light redC lighten-3 btn button-second " 
             onClick={this.props.history.goBack}
           >
             Back

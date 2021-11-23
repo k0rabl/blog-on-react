@@ -24,14 +24,9 @@ class Article extends PureComponent<ArticleProps, IState> {
   handleShowModal = () => {
     const { setOpen, setType, setHandler } = this.context 
     
+    setType('delete')
     setOpen(true)
-    setType('delete')
     setHandler(this.handleDelete)
-  }
-
-  componentDidMount() {
-    const { setType } = this.context 
-    setType('delete')
   }
 
   render() {
