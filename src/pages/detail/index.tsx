@@ -34,6 +34,12 @@ class Detail extends Component<Props, IState> {
 
     if (!file || !cb) return false
 
+    if (file.size > 500000) {
+      console.error('File size > 500kb');
+      return false
+      // TODO: Add alert
+    } 
+    
     let reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
@@ -110,7 +116,7 @@ class Detail extends Component<Props, IState> {
         {
           editMode  
             ? <>        
-              <input type="file" name="image"  onChange={this.handleAddFile}/>      
+              <input type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
               
               <img src={image} alt="" />
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>
