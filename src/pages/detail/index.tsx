@@ -108,7 +108,7 @@ class Detail extends Component<Props, IState> {
     const { handleEditElement, handleAddElement, history, articles } = this.props 
     const { setOpen, setType } = this.context 
 
-    articles.filter(element => element.id === article.id)
+    articles.some(element => element.id === article.id)
       ? handleEditElement(article)
       : handleAddElement(article)   
 

@@ -6,11 +6,6 @@ import Calendar from "../calendar/Calendar"
 import Search from "../Search/component/Search"
 
 class Header extends Component<IHeader> {
- /*  constructor(props: IHeader){
-    super(props)
-    
-  } */
-
   render() {
     return (
       <header>
