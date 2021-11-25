@@ -6,12 +6,12 @@ import Calendar from "../calendar/Calendar"
 import Search from "../Search/component/Search"
 
 class Header extends Component<IHeader> {
-  render() {
+  render() {    
     return (
       <header>
           <Search/>
           <div className="brand-logo s6 redC">{this.props.title}</div>
-          <Calendar/>
+          <Calendar />
       </header>
     )
   }

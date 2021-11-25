@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 import Article from '../../features/Article/component'
 import Pagination from '../../features/Pagination/component/Pagination'
-import { IListProps, IListState } from './IList'
+import { IProps, IListState } from './IList'
 import IArticle from '../../features/Article/component/IArticle'
+
+import {handleFilterDate} from '../../features/Article/ArticleSlice'
+import { setActive } from '../../features/Pagination/PaginationSlice'
 
 
 import { connect } from "react-redux"
 import { RootState } from '../../redux/store'
 import Edit from '../../features/edit'
+import { withRouter } from 'react-router-dom'
+import { compose } from 'redux'
 
-class List extends Component<IListProps, IListState>{
+class List extends Component<IProps, IListState>{
 
-  constructor(props: IListProps){
+  constructor(props: IProps){
     super(props)
 
     this.state = {
@@ -19,8 +24,7 @@ class List extends Component<IListProps, IListState>{
     }
   }
 
-  handleSlise () {
-    const { articles } = this.props
+  handleSlise (articles: IArticle[]) {
     
     let page: IArticle[]  = []
     const pages: IArticle[][] = [];  
@@ -41,13 +45,47 @@ class List extends Component<IListProps, IListState>{
     return pages
   }
 
-  componentDidUpdate(prevProps: IListProps) {
-    if (this.props.articles !== prevProps.articles)
-      this.setState({articlesArr: this.handleSlise()})
+  componentDidUpdate(prevProps: IProps) {
+
+    if (this.props === prevProps) return
+    
+    // const { setActive, handleFilterDate, filteredArticles, articles } = this.props
+    // const { search } = this.props.history.location;
+
+    // if(search) {
+    //   if(search.indexOf('?saerch')){
+        
+    //     setActive(1)
+    //     handleFilterDate(search.split('=')[1])
+
+    //     this.setState({articlesArr: this.handleSlise(filteredArticles)})
+    //   }
+
+    //   return
+    // }
+    
+    
+    //   this.setState({articlesArr: this.handleSlise(articles)})
   }
 
   componentDidMount() {
-    this.setState({articlesArr: this.handleSlise()})
+    const { setActive, handleFilterDate, filteredArticles, articles } = this.props
+    const { search } = this.props.history.location;   
+
+    if(search) {
+      if(search.indexOf('?date') > -1){
+        
+        setActive(1)
+        handleFilterDate(search.split('=')[1])
+        console.log(filteredArticles)
+
+        this.setState({articlesArr: this.handleSlise(filteredArticles)})
+      }
+
+      return
+    }
+    
+    // this.setState({articlesArr: this.handleSlise(this.props.articles)})
   }
 
 
@@ -72,8 +110,12 @@ class List extends Component<IListProps, IListState>{
 
 const mapStateToProps = (state: RootState) => ({
   active: state.pagination.active,
-  articles: state.search.articles
+  articles: state.search.articles,
+  filteredArticles: state.search.filteredArticles
 })
+const mapDispatchToProps = { handleFilterDate, setActive }
 
-
-export default connect(mapStateToProps)(List)
+export default compose<React.ComponentType<IProps>>(
+  withRouter,
+  connect(mapStateToProps, mapDispatchToProps)
+)(List)

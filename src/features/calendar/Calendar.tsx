@@ -1,27 +1,20 @@
 import React, { ChangeEvent, PureComponent } from 'react'
 import { connect } from 'react-redux'
-import {handleFilterDate, handleDrop} from '../Article/ArticleSlice'
-import { setActive } from '../Pagination/PaginationSlice'
-import { ICalendarProps, ICalendarState } from './ICalendar'
+import {handleDrop} from '../Article/ArticleSlice'
+import { IProps, ICalendarState } from './ICalendar'
 
 import './Calendar.sass'
+import { withRouter } from 'react-router-dom'
 
-class Calendar extends PureComponent<ICalendarProps, ICalendarState>{
+class Calendar extends PureComponent<IProps, ICalendarState>{
   
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { handleFilterDate } = this.props
-
+    this.props.history.push(`?date=${e.target.value}`)
     
-    console.log( e.target.value);
-
     this.setState({dateValue: e.target.value })
-    setActive(1)
-    handleFilterDate(e.target.value)
   }
   
   componentWillUnmount = () => {
-    console.log('test');
-    
     handleDrop()
   }
 
@@ -35,6 +28,6 @@ class Calendar extends PureComponent<ICalendarProps, ICalendarState>{
   }
 } 
 
-const mapDispatchToProps = { handleFilterDate, handleDrop, setActive }
+const mapDispatchToProps = { handleDrop }
 
-export default connect(null, mapDispatchToProps)(Calendar)
+export default withRouter(connect(null, mapDispatchToProps)(Calendar))

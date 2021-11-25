@@ -8,6 +8,7 @@ const initialState: PaginationState = {
   active: 1,
 }
 
+
 export const paginationSlice = createSlice({
   name: 'active',
   initialState,
