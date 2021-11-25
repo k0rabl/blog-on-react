@@ -72,7 +72,7 @@ class List extends Component<IListProps, IListState>{
 
 const mapStateToProps = (state: RootState) => ({
   active: state.pagination.active,
-  articles: state.search.filteredArticles
+  articles: state.search.articles
 })
 
 

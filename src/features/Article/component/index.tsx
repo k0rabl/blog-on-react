@@ -74,8 +74,7 @@ class Article extends PureComponent<ArticleProps, IState> {
 
 
 const mapStateToProps = (state: RootState) => ({
-  editMode: state.edit.editMode,
-  articles: state.search.filteredArticles
+  editMode: state.edit.editMode
 })
 
 const mapDispatch = { handleDeleteElement }

@@ -17,27 +17,28 @@ class Search extends PureComponent<ISearchProps, ISearchState>{
     }
   }
 
-  handleChange(e: ChangeEvent<HTMLInputElement>) {
-    const { handleFilterString, setActive } = this.props
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { handleFilterString, setActive } = this.props  
 
     this.setState({searchValue: e.target.value })
     setActive(1)
     handleFilterString(e.target.value)
   }
 
-  dropSearch(){
+  dropSearch = () => {
     const { handleDrop } = this.props
     this.setState({searchValue: '' })
 
     handleDrop()
   }
 
+
   render() {    
     const { searchValue } = this.state
     return  (
       <div className="searchContainer">
-        <input type="search" onChange={e => this.handleChange(e)} value={searchValue} placeholder='Search'/>
-        <i className={`material-icons close ${!!searchValue ? 'show': ''}`} onClick={() => this.dropSearch()}>close</i>
+        <input type="search" onChange={this.handleChange} value={searchValue} placeholder='Search'/>
+        <i className={`material-icons close ${!!searchValue ? 'show': ''}`} onClick={this.dropSearch}>close</i>
       </div>
     )
   }

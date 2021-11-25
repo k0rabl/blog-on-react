@@ -4,10 +4,12 @@ import IArticle from './component/IArticle'
 
 export interface PaginationState {
   filteredArticles: IArticle[]
+  articles: IArticle[]
 }
 
 const initialState: PaginationState = {
-  filteredArticles: Articles
+  filteredArticles: Articles,
+  articles: Articles
 }
 
 export const articlesSlice = createSlice({
@@ -15,31 +17,31 @@ export const articlesSlice = createSlice({
   initialState,
   reducers: {
     handleFilterString: (state, action: PayloadAction<string>) => {
-      state.filteredArticles = Articles.filter(element => {
+      state.filteredArticles = state.articles.filter(element => {
         return element.name.toLowerCase().indexOf(action.payload.toLowerCase()) > -1
       })
     },
     handleFilterDate: (state, action: PayloadAction<string>) => {
-      state.filteredArticles = Articles.filter(element => {
+      state.filteredArticles = state.articles.filter(element => {
         return element.date.indexOf(action.payload) > -1
       })
     },
     handleDrop: state => {
-      state.filteredArticles = Articles
+      state.filteredArticles = state.articles
     },
     handleRead: (state, action: PayloadAction<number>) => {
-      state.filteredArticles =  state.filteredArticles.map((element: IArticle) => ({
+      state.articles =  state.articles.map((element: IArticle) => ({
         ...element,
         isRead: element.id === action.payload ? true : element.isRead
       }))
     },
     handleDeleteElement: (state, action: PayloadAction<number>) => {
-      state.filteredArticles = state.filteredArticles.filter(element => {
+      state.articles = state.articles.filter(element => {
         return element.id !== action.payload
       })
     },
     handleEditElement: (state, action: PayloadAction<IArticle>) => {
-      state.filteredArticles = state.filteredArticles.map((element: IArticle) => {
+      state.articles = state.articles.map((element: IArticle) => {
         if(element.id === action.payload.id)  
           return action.payload
 
@@ -47,11 +49,7 @@ export const articlesSlice = createSlice({
       })
     },
     handleAddElement: (state, action: PayloadAction<IArticle>) => {
-      state.filteredArticles.push(action.payload)
-    },
-    handleRebuildStorage: (state, action: PayloadAction<IArticle[]>) => {  
-      localStorage.removeItem('Articles')
-      localStorage.setItem('Articles', JSON.stringify(action.payload))
+      state.articles.push(action.payload)
     }
   }
 })

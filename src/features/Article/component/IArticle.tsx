@@ -14,7 +14,6 @@ export interface IState {
 
 interface IProps {
   editMode?: Boolean
-  articles: IArticle[]
   handleDeleteElement: Function
 }
 

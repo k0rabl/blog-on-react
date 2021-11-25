@@ -8,19 +8,28 @@ import './Calendar.sass'
 
 class Calendar extends PureComponent<ICalendarProps, ICalendarState>{
   
-  handleChange(e: ChangeEvent<HTMLInputElement>) {
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { handleFilterDate } = this.props
+
+    
+    console.log( e.target.value);
 
     this.setState({dateValue: e.target.value })
     setActive(1)
     handleFilterDate(e.target.value)
+  }
+  
+  componentWillUnmount = () => {
+    console.log('test');
+    
+    handleDrop()
   }
 
   render() {
 
     return (
       <div className="input-field inline s6">
-        <input type='date' onChange={(e) => this.handleChange(e)}/>
+        <input type='date' onChange={this.handleChange}/>
       </div>
     )
   }

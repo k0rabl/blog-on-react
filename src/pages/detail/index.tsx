@@ -27,7 +27,7 @@ class Detail extends Component<Props, IState> {
         preview: '',
         desc: '',
         isRead: false,
-        date: today.toDateString()
+        date: today.toISOString().split('T')[0]
       }
     }
   }
@@ -169,7 +169,7 @@ class Detail extends Component<Props, IState> {
 
 
 const mapStateToProps = (state: RootState) => ({
-  articles: state.search.filteredArticles,
+  articles: state.search.articles,
   editMode: state.edit.editMode
 })
 
