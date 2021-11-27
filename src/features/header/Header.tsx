@@ -9,7 +9,7 @@ class Header extends Component<IHeader> {
   render() {    
     return (
       <header>
-          <Search/>
+          <Search />
           <div className="brand-logo s6 redC">{this.props.title}</div>
           <Calendar />
       </header>
