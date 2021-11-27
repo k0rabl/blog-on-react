@@ -15,10 +15,12 @@ class Search extends PureComponent<RouteComponentProps, ISearchState>{
     }
   }
 
-  handleChange = (e: ChangeEvent<HTMLInputElement>) => {    
-    this.props.history.push(`/search?string=${e.target.value}`)
-
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {   
     this.setState({searchValue: e.target.value })
+    this.props.history.push(`/search?string=${e.target.value}`)
+     
+    if(!e.target.value)
+      this.props.history.push('/')
   }
 
   componentDidMount = () => {

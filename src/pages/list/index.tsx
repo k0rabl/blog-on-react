@@ -13,6 +13,8 @@ import Edit from '../../features/edit'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 
+import './List.sass'
+
 class List extends Component<IProps, IListState>{
 
   constructor(props: IProps){
@@ -83,6 +85,7 @@ class List extends Component<IProps, IListState>{
     return (
       <>
         <Edit />
+        {!articlesArr.length && <p className='empty'>Articles run away!</p>}
         {articlesArr[active - 1]?.map(element => <Article key={element.id} {...element}/>)}
         { 
           articlesArr.length > 1 && 

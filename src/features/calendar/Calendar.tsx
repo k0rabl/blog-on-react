@@ -15,11 +15,10 @@ class Calendar extends PureComponent<RouteComponentProps, ICalendarState>{
   
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     this.setState({dateValue: e.target.value })
+    this.props.history.push(`/search?date=${e.target.value}`)
     
     if(!e.target.value)
       this.props.history.push('/')
-
-    this.props.history.push(`/search?date=${e.target.value}`)
   }
 
   componentDidMount = () => {
