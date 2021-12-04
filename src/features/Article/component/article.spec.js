@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
-
+import { ModalProvider } from "../../../Context/ModalContext";
 import {
   BrowserRouter as Router,
 } from "react-router-dom"
@@ -24,17 +24,20 @@ describe('<Article />', () => {
 
     component = mount(
       <Provider store={store}>
-        <Router>
-          <Article 
-            match={{params: {id: 1}}}
-            />
-        </Router>
+        <ModalProvider >
+          <Router>
+            <Article 
+              match={{params: {id: 1}}}
+              />
+          </Router>
+        </ModalProvider>
       </Provider>
     )
   })
 
   it('+++ render the component', () => {
     expect(component.find(Article).length).toEqual(1)
+    expect(component).toMatchSnapshot()
   })
 
   
