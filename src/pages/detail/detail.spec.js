@@ -1,27 +1,34 @@
+// import 'jsdom-global/register'
 import React from "react"
 import ConnectedDetail, { Detail } from './index'
 import { shallow, mount } from 'enzyme';
+
+import {
+  BrowserRouter as Router,
+} from "react-router-dom"
+
 import configureStore from 'redux-mock-store'
 import { Provider } from "react-redux";
 import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
 
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import Articles from "../../fixtures/Articles";
 
 
-import jsdom from 'jsdom'
-const doc = jsdom.jsdom('<!doctype html><html><body></body></html>')
-global.document = doc
-global.window = doc.defaultView
-Enzyme.configure({ adapter: new Adapter() });
-
+// import jsdom from 'jsdom'
+// const { JSDOM } = jsdom;
+// const doc = new JSDOM(`<!doctype html><html><body></body></html>`)
+// global.document = doc
+// global.window = doc.defaultView
 
 describe('<Detail />', () => {
   const initialState = { 
-    articles: Articles,
-    
-   };
+    search: {        
+      articles: Articles,
+    },
+    edit: {        
+      editMode: true,
+    }
+  };
   const mockStore = configureStore();
   let store, component;
 
@@ -29,9 +36,13 @@ describe('<Detail />', () => {
     store = mockStore(initialState)
 
     component = mount(
-    <Provider store={store}>
-      <ConnectedDetail/>
-    </Provider>
+      <Provider store={store}>
+        <Router>
+          <ConnectedDetail 
+            match={{params: {id: 1}}}
+            />
+        </Router>
+      </Provider>
     )
   })
 
@@ -39,8 +50,45 @@ describe('<Detail />', () => {
     expect(component.find(ConnectedDetail).length).toEqual(1)
   })
 
+  it('+++ get id from props', () => {
+    expect(component.find(ConnectedDetail).props().match.params.id).toEqual(1)
+  })
+
+  it('+++ check Button back', () => {
+    component
+      .find('button.button-second')
+      .simulate('click');
+  })
+
+  it('+++ check Button primary', () => {
+    component
+      .find('button.button-primary')
+      .simulate('click');
+  })
+
+  it('should base64 file encoding', () => {
+
+    const mockFile = new File(["image1"], "image1.jpg", { type: 'image/*' })
+
+    component.find('input#file').simulate('change', {
+      target: {
+        files: [mockFile]
+      }
+    })
+  })
+
+  it('should change input', () => {
+
+    component.find('input.input__name').simulate('change', {
+      target: {
+        value: 'test'
+      }
+    })
+    expect(component).toMatchSnapshot()
+  })
+
   it('+++ check Prop matches with initialState', () => {
-      expect(component.find(Detail).prop('articles')).toEqual(initialState.articles)
+      expect(component.find(Detail).prop('articles')).toEqual(initialState.search.articles)
   })
 
   it('+++ check actions on dispatching ', () => {

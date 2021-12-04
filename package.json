@@ -53,10 +53,15 @@
     "@babel/preset-typescript": "^7.16.0",
     "@types/jest": "^26.0.24",
     "@types/react-router-dom": "^5.3.2",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
     "babel-jest": "^27.4.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "jest": "^27.3.1",
+    "jest-environment-jsdom": "^27.0.6",
+    "jsdom": "19.0.0",
+    "jsdom-global": "3.0.2",
     "redux-mock-store": "^1.5.4",
     "ts-jest": "^27.0.7"
   },
@@ -64,6 +69,13 @@
     "verbose": true,
     "clearMocks": true,
     "collectCoverage": true,
+    "testEnvironment": "jsdom",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
     "moduleNameMapper": {
       "\\.(css|scss|less|sass)$": "identity-obj-proxy"
     },

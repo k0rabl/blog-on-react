@@ -128,7 +128,7 @@ export class Detail extends Component<Props, IState> {
           editMode  
             ? <>        
               <div className="addImage">
-                <input type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
+                <input id="file" type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
                 <img src={image} alt="" />
               </div>
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>
