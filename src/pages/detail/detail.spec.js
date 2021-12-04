@@ -1,7 +1,7 @@
 // import 'jsdom-global/register'
 import React from "react"
 import ConnectedDetail, { Detail } from './index'
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import {
   BrowserRouter as Router,
@@ -12,13 +12,6 @@ import { Provider } from "react-redux";
 import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
 
 import Articles from "../../fixtures/Articles";
-
-
-// import jsdom from 'jsdom'
-// const { JSDOM } = jsdom;
-// const doc = new JSDOM(`<!doctype html><html><body></body></html>`)
-// global.document = doc
-// global.window = doc.defaultView
 
 describe('<Detail />', () => {
   const initialState = { 

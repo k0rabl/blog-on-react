@@ -53,10 +53,6 @@ class Article extends PureComponent<ArticleProps, IState> {
                 <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-delete" onClick={this.handleShowModal}>
                   <i className="material-icons center">delete</i>
                 </button > 
-                
-                {/* <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-edit" onClick={() => console.log('edit')}>
-                  <i className="material-icons center">edit</i>
-                </button > */} 
               </div>
             }
           </div>
