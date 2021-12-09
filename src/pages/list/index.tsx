@@ -59,7 +59,8 @@ class List extends Component<IProps, IListState>{
       setActive(1)
     } else if (search.split('=')[0] === ('?string')){
       filteredArticles = articles.filter(element =>
-        element.name.toLowerCase().indexOf(search.split('=')[1]) > -1
+        element.name.toLowerCase().indexOf(search.split('=')[1].toLowerCase()) > -1 || 
+        element.desc.toLowerCase().indexOf(search.split('=')[1].toLowerCase()) > -1
       )
       setActive(1)
     }
