@@ -83,7 +83,7 @@ class List extends Component<IProps, IListState>{
     const { active } = this.props
 
     return (
-      <>
+      <div className='list'>
         <Edit />
         {!articlesArr.length && <p className='empty'>Articles run away!</p>}
         {articlesArr[active - 1]?.map(element => <Article key={element.id} {...element}/>)}
@@ -91,7 +91,7 @@ class List extends Component<IProps, IListState>{
           articlesArr.length > 1 && 
           <Pagination amount={articlesArr.length}/>
         }
-      </>
+      </div>
     )
   }
 }

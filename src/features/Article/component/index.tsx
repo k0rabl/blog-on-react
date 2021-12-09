@@ -34,6 +34,7 @@ class Article extends PureComponent<ArticleProps, IState> {
       id, 
       date, 
       name, 
+      image,
       desc, 
       isRead,
       editMode
@@ -41,27 +42,34 @@ class Article extends PureComponent<ArticleProps, IState> {
     
     return (
       <div className="container article">
-        <div className="top">
-          <div className="top-left">
-            
-            <Link to={`/${id}`} className="link articleLink">
-              <div className={`title ${isRead && 'read'} ${editMode && 'edit'}`}>{name}</div>
-            </Link>
-            
-            {editMode && 
-              <div className="buttons">
-                <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-delete" onClick={this.handleShowModal}>
-                  <i className="material-icons center">delete</i>
-                </button > 
-              </div>
-            }
-          </div>
-          
-          <div className="date">{date}</div>
+        <div className="leftImage">
+          {image 
+            ? <img className="showImage" src={image} alt="" />
+            : <span>No image</span>
+          }
         </div>
-        <div className="bottom">
-          <div className="image"></div>
-          <div className="descr">{desc}</div>
+        <div className="rightDescr">
+          <div className="top">
+            <div className="top-left">
+              
+              <Link to={`/${id}`} className="link articleLink">
+                <div className={`title ${isRead && 'read'} ${editMode && 'edit'}`}>{name}</div>
+              </Link>
+              
+              {editMode && 
+                <div className="buttons">
+                  <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-delete" onClick={this.handleShowModal}>
+                    <i className="material-icons center">delete</i>
+                  </button > 
+                </div>
+              }
+            </div>
+            
+            <div className="date">{date}</div>
+          </div>
+          <div className="bottom">
+            <div className="descr">{desc}</div>
+          </div> 
         </div>
       </div>
     )
