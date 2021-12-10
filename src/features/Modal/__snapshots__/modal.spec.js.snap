@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> +++ render the component 1`] = `
+<ModalProvider
+  value={
+    Object {
+      "isOpen": true,
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Modal>
+        <div
+          className="modalC false"
+        >
+          <div
+            className="modalC__content"
+          >
+            <h6
+              className="modalC__title"
+            >
+              Exit
+            </h6>
+            <p
+              className="modalC__text"
+            >
+              You realy want exit from edit-mode?
+            </p>
+            <div
+              className="modalC__buttons buttons"
+            >
+              <button
+                className="waves-effect waves-light redC-bg lighten-3 btn btn__no button-second"
+                onClick={[Function]}
+              >
+                No, Thanks
+              </button>
+              <button
+                className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
+                onClick={[Function]}
+              >
+                Exit
+              </button>
+            </div>
+          </div>
+        </div>
+      </Modal>
+    </Router>
+  </BrowserRouter>
+</ModalProvider>
+`;
