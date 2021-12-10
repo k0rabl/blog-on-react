@@ -23,14 +23,14 @@ exports[`<List /> +++ check calendar search 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "j3x7uw",
+            "key": "lzk08u",
             "pathname": "/",
             "search": "",
             "state": undefined,
           },
           Object {
             "hash": "",
-            "key": "ll11hg",
+            "key": "yvhtn4",
             "pathname": "/search",
             "search": "?date=2021-12-10",
             "state": undefined,
@@ -44,7 +44,7 @@ exports[`<List /> +++ check calendar search 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "ll11hg",
+          "key": "yvhtn4",
           "pathname": "/search",
           "search": "?date=2021-12-10",
           "state": undefined,
@@ -65,14 +65,14 @@ exports[`<List /> +++ check calendar search 1`] = `
             "entries": Array [
               Object {
                 "hash": "",
-                "key": "j3x7uw",
+                "key": "lzk08u",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
               },
               Object {
                 "hash": "",
-                "key": "ll11hg",
+                "key": "yvhtn4",
                 "pathname": "/search",
                 "search": "?date=2021-12-10",
                 "state": undefined,
@@ -86,7 +86,7 @@ exports[`<List /> +++ check calendar search 1`] = `
             "listen": [Function],
             "location": Object {
               "hash": "",
-              "key": "ll11hg",
+              "key": "yvhtn4",
               "pathname": "/search",
               "search": "?date=2021-12-10",
               "state": undefined,
@@ -98,7 +98,7 @@ exports[`<List /> +++ check calendar search 1`] = `
         location={
           Object {
             "hash": "",
-            "key": "ll11hg",
+            "key": "yvhtn4",
             "pathname": "/search",
             "search": "?date=2021-12-10",
             "state": undefined,
@@ -201,14 +201,14 @@ exports[`<List /> +++ check calendar search 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "j3x7uw",
+                  "key": "lzk08u",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
                 },
                 Object {
                   "hash": "",
-                  "key": "ll11hg",
+                  "key": "yvhtn4",
                   "pathname": "/search",
                   "search": "?date=2021-12-10",
                   "state": undefined,
@@ -222,7 +222,7 @@ exports[`<List /> +++ check calendar search 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "ll11hg",
+                "key": "yvhtn4",
                 "pathname": "/search",
                 "search": "?date=2021-12-10",
                 "state": undefined,
@@ -234,7 +234,7 @@ exports[`<List /> +++ check calendar search 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "ll11hg",
+              "key": "yvhtn4",
               "pathname": "/search",
               "search": "?date=2021-12-10",
               "state": undefined,
@@ -262,16 +262,16 @@ exports[`<List /> +++ check calendar search 1`] = `
                   className="editMode__container editMode__container-edit"
                 >
                   <Link
-                    className="waves-effect waves-light redC-bg lighten-3 btn"
+                    className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                     to="/add"
                   >
                     <LinkAnchor
-                      className="waves-effect waves-light redC-bg lighten-3 btn"
+                      className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                       href="/add"
                       navigate={[Function]}
                     >
                       <a
-                        className="waves-effect waves-light redC-bg lighten-3 btn"
+                        className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                         href="/add"
                         onClick={[Function]}
                       >
@@ -285,7 +285,7 @@ exports[`<List /> +++ check calendar search 1`] = `
                     </LinkAnchor>
                   </Link>
                   <button
-                    className="waves-effect waves-light redC-bg lighten-3 btn"
+                    className="waves-effect waves-light redC-bg lighten-3 btn btn-close"
                     onClick={[Function]}
                   >
                     <i
@@ -334,14 +334,14 @@ exports[`<List /> +++ check text search 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "hpotpg",
+            "key": "r421q2",
             "pathname": "/",
             "search": "",
             "state": undefined,
           },
           Object {
             "hash": "",
-            "key": "gzzzx4",
+            "key": "byat8h",
             "pathname": "/search",
             "search": "?string=how",
             "state": undefined,
@@ -355,7 +355,7 @@ exports[`<List /> +++ check text search 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "gzzzx4",
+          "key": "byat8h",
           "pathname": "/search",
           "search": "?string=how",
           "state": undefined,
@@ -376,14 +376,14 @@ exports[`<List /> +++ check text search 1`] = `
             "entries": Array [
               Object {
                 "hash": "",
-                "key": "hpotpg",
+                "key": "r421q2",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
               },
               Object {
                 "hash": "",
-                "key": "gzzzx4",
+                "key": "byat8h",
                 "pathname": "/search",
                 "search": "?string=how",
                 "state": undefined,
@@ -397,7 +397,7 @@ exports[`<List /> +++ check text search 1`] = `
             "listen": [Function],
             "location": Object {
               "hash": "",
-              "key": "gzzzx4",
+              "key": "byat8h",
               "pathname": "/search",
               "search": "?string=how",
               "state": undefined,
@@ -409,7 +409,7 @@ exports[`<List /> +++ check text search 1`] = `
         location={
           Object {
             "hash": "",
-            "key": "gzzzx4",
+            "key": "byat8h",
             "pathname": "/search",
             "search": "?string=how",
             "state": undefined,
@@ -512,14 +512,14 @@ exports[`<List /> +++ check text search 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "hpotpg",
+                  "key": "r421q2",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
                 },
                 Object {
                   "hash": "",
-                  "key": "gzzzx4",
+                  "key": "byat8h",
                   "pathname": "/search",
                   "search": "?string=how",
                   "state": undefined,
@@ -533,7 +533,7 @@ exports[`<List /> +++ check text search 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "gzzzx4",
+                "key": "byat8h",
                 "pathname": "/search",
                 "search": "?string=how",
                 "state": undefined,
@@ -545,7 +545,7 @@ exports[`<List /> +++ check text search 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "gzzzx4",
+              "key": "byat8h",
               "pathname": "/search",
               "search": "?string=how",
               "state": undefined,
@@ -573,16 +573,16 @@ exports[`<List /> +++ check text search 1`] = `
                   className="editMode__container editMode__container-edit"
                 >
                   <Link
-                    className="waves-effect waves-light redC-bg lighten-3 btn"
+                    className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                     to="/add"
                   >
                     <LinkAnchor
-                      className="waves-effect waves-light redC-bg lighten-3 btn"
+                      className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                       href="/add"
                       navigate={[Function]}
                     >
                       <a
-                        className="waves-effect waves-light redC-bg lighten-3 btn"
+                        className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                         href="/add"
                         onClick={[Function]}
                       >
@@ -596,7 +596,7 @@ exports[`<List /> +++ check text search 1`] = `
                     </LinkAnchor>
                   </Link>
                   <button
-                    className="waves-effect waves-light redC-bg lighten-3 btn"
+                    className="waves-effect waves-light redC-bg lighten-3 btn btn-close"
                     onClick={[Function]}
                   >
                     <i
@@ -1267,16 +1267,16 @@ exports[`<List /> +++ render the component with 1 article 1`] = `
                     className="editMode__container editMode__container-edit"
                   >
                     <Link
-                      className="waves-effect waves-light redC-bg lighten-3 btn"
+                      className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                       to="/add"
                     >
                       <LinkAnchor
-                        className="waves-effect waves-light redC-bg lighten-3 btn"
+                        className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                         href="/add"
                         navigate={[Function]}
                       >
                         <a
-                          className="waves-effect waves-light redC-bg lighten-3 btn"
+                          className="waves-effect waves-light redC-bg lighten-3 btn btn-add"
                           href="/add"
                           onClick={[Function]}
                         >
@@ -1290,7 +1290,7 @@ exports[`<List /> +++ render the component with 1 article 1`] = `
                       </LinkAnchor>
                     </Link>
                     <button
-                      className="waves-effect waves-light redC-bg lighten-3 btn"
+                      className="waves-effect waves-light redC-bg lighten-3 btn btn-close"
                       onClick={[Function]}
                     >
                       <i

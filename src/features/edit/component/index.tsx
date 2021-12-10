@@ -8,7 +8,7 @@ import { RootState } from '../../redux/store'
 import { Link } from 'react-router-dom'
 import ModalContext from '../../Context/ModalContext'
 
-class Edit extends PureComponent<IEditProps, IEditState>{
+export class Edit extends PureComponent<IEditProps, IEditState>{
   static contextType = ModalContext  
 
   handleClick = () => {
@@ -31,7 +31,7 @@ class Edit extends PureComponent<IEditProps, IEditState>{
     const { editMode } = this.props
     const user = (
       <div className={`editMode__container editMode__container${editMode ? '': '-user'}`}>
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleClick}>
+        <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-edit" onClick={this.handleClick}>
           <i className="material-icons left">edit</i>
           Edit
         </button > 
@@ -40,11 +40,11 @@ class Edit extends PureComponent<IEditProps, IEditState>{
 
     const edit = (
       <div className={`editMode__container editMode__container${editMode ? '-edit' : ''}`}>
-        <Link to='/add' className="waves-effect waves-light redC-bg lighten-3 btn">
+        <Link to='/add' className="waves-effect waves-light redC-bg lighten-3 btn btn-add">
           <i className="material-icons left">add</i>
           Add article
         </Link > 
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn" onClick={this.handleShowModal}>
+        <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-close" onClick={this.handleShowModal}>
           <i className="material-icons left">close</i>
           Exit
         </button > 

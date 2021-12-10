@@ -1,10 +1,28 @@
 import React from "react"
 import { Alert } from './index'
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
+
+import {
+  BrowserRouter as Router,
+} from "react-router-dom"
 
 
-it("Check on existing Alert", () => {
-  const component = shallow(<Alert />)
-  const wrapper = component.find('.alert')
-  expect(wrapper.length).toBe(1)
+import { AlertProvider } from "../../Context/AlertContext";
+
+describe('<Alert />', () => {
+  let component
+  beforeEach(() => {
+    component = mount(
+      <AlertProvider value={{isOpen: true}}>
+        <Router>
+          <Alert />
+        </Router>
+      </AlertProvider>
+    )
+  })
+
+  it('+++ render the component', () => {
+    expect(component.find(Alert).length).toEqual(1)
+    expect(component).toMatchSnapshot()
+  })
 })

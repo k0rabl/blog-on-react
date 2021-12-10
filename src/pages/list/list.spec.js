@@ -9,7 +9,7 @@ import {
 
 import configureStore from 'redux-mock-store'
 import { Provider } from "react-redux";
-// import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
+import { setActive } from '../../features/Pagination/PaginationSlice'
 
 import Articles from "../../fixtures/Articles";
 import {createMemoryHistory} from 'history'
@@ -102,5 +102,14 @@ describe('<List />', () => {
     
     expect(component.find(ConnectedList).length).toEqual(1)
     expect(component).toMatchSnapshot()
+  })
+
+  it('+++ check actions on dispatching ', () => {
+    let action
+
+    store.dispatch(setActive(1))
+    action = store.getActions()
+    
+    expect(action[0].type).toBe("active/setActive")
   })
 })

@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
 
 import Articles from "../../fixtures/Articles";
+import { AlertProvider } from "../../Context/AlertContext";
 
 describe('<Detail />', () => {
   const initialState = { 
@@ -30,11 +31,13 @@ describe('<Detail />', () => {
 
     component = mount(
       <Provider store={store}>
-        <Router>
-          <ConnectedDetail 
-            match={{params: {id: 1}}}
-            />
-        </Router>
+        <AlertProvider>
+          <Router>
+            <ConnectedDetail 
+              match={{params: {id: 1}}}
+              />
+          </Router>
+        </AlertProvider>
       </Provider>
     )
   })
@@ -60,8 +63,7 @@ describe('<Detail />', () => {
   })
 
   it('should base64 file encoding', () => {
-
-    const mockFile = new File(["image1"], "image1.jpg", { type: 'image/*' })
+    const mockFile = new File(['image'], 'test')
 
     component.find('input#file').simulate('change', {
       target: {

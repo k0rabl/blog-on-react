@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> +++ render the component 1`] = `
+<AlertProvider
+  value={
+    Object {
+      "isOpen": true,
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Alert>
+        <div
+          className="alert "
+        >
+          <div
+            className="content"
+          />
+          <div
+            className="close"
+          />
+        </div>
+      </Alert>
+    </Router>
+  </BrowserRouter>
+</AlertProvider>
+`;
