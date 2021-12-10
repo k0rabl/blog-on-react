@@ -1,13 +1,15 @@
 import React, { PureComponent, ChangeEvent } from 'react'
 
-import { ISearchState } from './ISearch'
+import { IProps, ISearchState } from './ISearch'
 
 import './Search.sass'
-import { RouteComponentProps, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { setActive } from '../../Pagination/PaginationSlice'
 
-class Search extends PureComponent<RouteComponentProps, ISearchState>{
+class Search extends PureComponent<IProps, ISearchState>{
 
-  constructor(props: RouteComponentProps){
+  constructor(props: IProps){
     super(props)
 
     this.state = {
@@ -16,11 +18,14 @@ class Search extends PureComponent<RouteComponentProps, ISearchState>{
   }
 
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {   
+    const { setActive } = this.props
     this.setState({searchValue: e.target.value })
     this.props.history.push(`/search?string=${e.target.value}`)
      
     if(!e.target.value)
       this.props.history.push('/')
+      
+    setActive(1)
   }
 
   componentDidMount = () => {
@@ -47,4 +52,7 @@ class Search extends PureComponent<RouteComponentProps, ISearchState>{
   }
 } 
 
-export default withRouter(Search)
+export default withRouter(connect(
+  null,
+  { setActive },
+)(Search));

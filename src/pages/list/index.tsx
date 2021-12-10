@@ -47,42 +47,47 @@ class List extends Component<IProps, IListState>{
   }
 
   setSearch = () => {
-    const { setActive, articles } = this.props
+    const { articles } = this.props
     const { search } = this.props.history.location;
 
     let filteredArticles: IArticle[] = articles
 
-    if(search.split('=')[0] === ('?date')){
-      filteredArticles = articles.filter(element => 
-        element.date.indexOf(search.split('=')[1]) > -1
-      )
-      setActive(1)
-    } else if (search.split('=')[0] === ('?string')){
-      filteredArticles = articles.filter(element =>
-        element.name.toLowerCase().indexOf(search.split('=')[1].toLowerCase()) > -1 || 
-        element.desc.toLowerCase().indexOf(search.split('=')[1].toLowerCase()) > -1
-      )
-      setActive(1)
+    if (search){
+      const searchName = search.split('=')[0]
+      const searchVal = search.split('=')[1]
+
+      if(searchName === ('?date')){
+        filteredArticles = articles.filter(element => 
+          element.date.indexOf(searchVal) > -1
+        )
+      } else if (searchName === ('?string')){
+        filteredArticles = articles.filter(element =>
+          element.name.toLowerCase().indexOf(searchVal.toLowerCase()) > -1 || 
+          element.desc.toLowerCase().indexOf(searchVal.toLowerCase()) > -1
+        )
+      }
+
     }
+    
 
     this.setState({articlesArr: this.handleSlise(filteredArticles)})    
   } 
 
   componentDidUpdate(prevProps: IProps) {
-
     if (this.props === prevProps) return
     this.setSearch();    
   }
 
   componentDidMount() {
-    this.setSearch();    
+    this.setSearch();  
   }
 
 
   render() {
     const { articlesArr } = this.state
     const { active } = this.props
-
+    console.log(active);
+    
     return (
       <div className='list'>
         <Edit />

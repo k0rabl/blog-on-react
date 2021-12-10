@@ -36,7 +36,6 @@ const Pagination = (props: StoreProps) => {
 
     if (active < amount && side === 'plus') 
       dispatch(increment())
-
     else if (active > 1 && side === 'minus') 
       dispatch(decrement())
 

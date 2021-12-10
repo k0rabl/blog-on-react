@@ -1,5 +1,5 @@
 interface Header {
-  title: String
+  title: string
 }
 
 export default Header
