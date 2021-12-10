@@ -3,8 +3,10 @@ import { ICalendarState } from './ICalendar'
 
 import './Calendar.sass'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { setActive } from '../Pagination/PaginationSlice'
 
-class Calendar extends PureComponent<RouteComponentProps, ICalendarState>{
+class Calendar extends PureComponent<RouteComponentProps<{}>, ICalendarState>{
   constructor(props: RouteComponentProps) {
     super(props)
 
@@ -19,6 +21,8 @@ class Calendar extends PureComponent<RouteComponentProps, ICalendarState>{
     
     if(!e.target.value)
       this.props.history.push('/')
+      
+    setActive(1)
   }
 
   componentDidMount = () => {
@@ -38,4 +42,8 @@ class Calendar extends PureComponent<RouteComponentProps, ICalendarState>{
   }
 } 
 
-export default withRouter(Calendar)
+
+export default withRouter(connect(
+  null,
+  { setActive },
+)(Calendar));
