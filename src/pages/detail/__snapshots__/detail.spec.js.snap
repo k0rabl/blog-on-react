@@ -236,7 +236,7 @@ exports[`<Detail /> should change input 1`] = `
               <p
                 className="date"
               >
-                2021-12-04
+                2021-12-10
               </p>
               <div
                 className="buttons"

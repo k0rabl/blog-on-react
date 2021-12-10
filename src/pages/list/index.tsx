@@ -15,7 +15,7 @@ import { compose } from 'redux'
 
 import './List.sass'
 
-class List extends Component<IProps, IListState>{
+export class List extends Component<IProps, IListState>{
 
   constructor(props: IProps){
     super(props)
@@ -86,7 +86,6 @@ class List extends Component<IProps, IListState>{
   render() {
     const { articlesArr } = this.state
     const { active } = this.props
-    console.log(active);
     
     return (
       <div className='list'>
@@ -110,7 +109,12 @@ const mapStateToProps = (state: RootState) => ({
 })
 const mapDispatchToProps = { setActive }
 
-export default compose<React.ComponentType<IProps>>(
-  withRouter,
-  connect(mapStateToProps, mapDispatchToProps)
-)(List)
+// export default compose<React.ComponentType<IProps>>(
+//   withRouter,
+//   connect(mapStateToProps, mapDispatchToProps)
+// )(List)
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(List));
