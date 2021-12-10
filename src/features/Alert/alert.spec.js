@@ -13,7 +13,7 @@ describe('<Alert />', () => {
   let component
   beforeEach(() => {
     component = mount(
-      <AlertProvider value={{isOpen: true}}>
+      <AlertProvider value={{isOpen: true, message: 'test'}}>
         <Router>
           <Alert />
         </Router>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Article from '../../features/Article/component'
-import Pagination from '../../features/Pagination/component/Pagination'
+import Pagination from '../../features/Pagination/component'
 import { IProps, IListState } from './IList'
 import IArticle from '../../features/Article/component/IArticle'
 
@@ -9,9 +9,8 @@ import { setActive } from '../../features/Pagination/PaginationSlice'
 
 import { connect } from "react-redux"
 import { RootState } from '../../redux/store'
-import Edit from '../../features/edit'
+import Edit from '../../features/edit/component'
 import { withRouter } from 'react-router-dom'
-import { compose } from 'redux'
 
 import './List.sass'
 

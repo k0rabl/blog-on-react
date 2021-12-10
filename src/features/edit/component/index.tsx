@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { handleMode } from './modeSlice'
+import { handleMode } from '../modeSlice'
 import { IEditProps, IEditState } from './IEdit'
 
 import './Edit.sass'
-import { RootState } from '../../redux/store'
+import { RootState } from '../../../redux/store'
 import { Link } from 'react-router-dom'
-import ModalContext from '../../Context/ModalContext'
+import ModalContext from '../../../Context/ModalContext'
 
 export class Edit extends PureComponent<IEditProps, IEditState>{
   static contextType = ModalContext  

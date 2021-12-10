@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> +++ check Button of number page 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Pagination
+    amount={3}
+  >
+    <div
+      className="pagination"
+    >
+      <div
+        className="pagination__container"
+      >
+        <button
+          className="numberPage prev"
+          onClick={[Function]}
+        >
+          prev
+        </button>
+        <button
+          className="numberPage numberPage-1 inactive"
+          key="1"
+          onClick={[Function]}
+        >
+          1
+        </button>
+        <button
+          className="numberPage numberPage-2 active redC-bg"
+          key="2"
+          onClick={[Function]}
+        >
+          2
+        </button>
+        <button
+          className="numberPage numberPage-3 inactive"
+          key="3"
+          onClick={[Function]}
+        >
+          3
+        </button>
+        <button
+          className="numberPage next"
+          onClick={[Function]}
+        >
+          next
+        </button>
+      </div>
+    </div>
+  </Pagination>
+</Provider>
+`;
+
+exports[`<Pagination /> +++ check arrow Button next 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Pagination
+    amount={3}
+  >
+    <div
+      className="pagination"
+    >
+      <div
+        className="pagination__container"
+      >
+        <button
+          className="numberPage prev"
+          onClick={[Function]}
+        >
+          prev
+        </button>
+        <button
+          className="numberPage numberPage-1 inactive"
+          key="1"
+          onClick={[Function]}
+        >
+          1
+        </button>
+        <button
+          className="numberPage numberPage-2 active redC-bg"
+          key="2"
+          onClick={[Function]}
+        >
+          2
+        </button>
+        <button
+          className="numberPage numberPage-3 inactive"
+          key="3"
+          onClick={[Function]}
+        >
+          3
+        </button>
+        <button
+          className="numberPage next"
+          onClick={[Function]}
+        >
+          next
+        </button>
+      </div>
+    </div>
+  </Pagination>
+</Provider>
+`;
+
+exports[`<Pagination /> +++ check arrow Button prev 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Pagination
+    amount={3}
+  >
+    <div
+      className="pagination"
+    >
+      <div
+        className="pagination__container"
+      >
+        <button
+          className="numberPage prev"
+          onClick={[Function]}
+        >
+          prev
+        </button>
+        <button
+          className="numberPage numberPage-1 inactive"
+          key="1"
+          onClick={[Function]}
+        >
+          1
+        </button>
+        <button
+          className="numberPage numberPage-2 active redC-bg"
+          key="2"
+          onClick={[Function]}
+        >
+          2
+        </button>
+        <button
+          className="numberPage numberPage-3 inactive"
+          key="3"
+          onClick={[Function]}
+        >
+          3
+        </button>
+        <button
+          className="numberPage next"
+          onClick={[Function]}
+        >
+          next
+        </button>
+      </div>
+    </div>
+  </Pagination>
+</Provider>
+`;
+
+exports[`<Pagination /> +++ render the component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Pagination
+    amount={3}
+  >
+    <div
+      className="pagination"
+    >
+      <div
+        className="pagination__container"
+      >
+        <button
+          className="numberPage prev"
+          onClick={[Function]}
+        >
+          prev
+        </button>
+        <button
+          className="numberPage numberPage-1 inactive"
+          key="1"
+          onClick={[Function]}
+        >
+          1
+        </button>
+        <button
+          className="numberPage numberPage-2 active redC-bg"
+          key="2"
+          onClick={[Function]}
+        >
+          2
+        </button>
+        <button
+          className="numberPage numberPage-3 inactive"
+          key="3"
+          onClick={[Function]}
+        >
+          3
+        </button>
+        <button
+          className="numberPage next"
+          onClick={[Function]}
+        >
+          next
+        </button>
+      </div>
+    </div>
+  </Pagination>
+</Provider>
+`;
