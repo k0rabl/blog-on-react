@@ -13,6 +13,10 @@ const routes: Array<RouteProps> = [
     component: List
   },
   {
+    path: '/search',
+    component: List
+  },
+  {
     path: '/:id',
     component: Detail
   }

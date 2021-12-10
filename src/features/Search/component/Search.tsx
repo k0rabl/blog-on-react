@@ -1,15 +1,13 @@
 import React, { PureComponent, ChangeEvent } from 'react'
 
-import { connect } from 'react-redux'
-import { ISearchProps, ISearchState } from './ISearch'
-import { setActive } from '../../Pagination/PaginationSlice'
-import { handleFilterString, handleDrop } from '../../Article/ArticleSlice'
+import { ISearchState } from './ISearch'
 
 import './Search.sass'
+import { RouteComponentProps, withRouter } from 'react-router-dom'
 
-class Search extends PureComponent<ISearchProps, ISearchState>{
+class Search extends PureComponent<RouteComponentProps, ISearchState>{
 
-  constructor(props: ISearchProps){
+  constructor(props: RouteComponentProps){
     super(props)
 
     this.state = {
@@ -17,19 +15,24 @@ class Search extends PureComponent<ISearchProps, ISearchState>{
     }
   }
 
-  handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { handleFilterString, setActive } = this.props  
-
+  handleChange = (e: ChangeEvent<HTMLInputElement>) => {   
     this.setState({searchValue: e.target.value })
-    setActive(1)
-    handleFilterString(e.target.value)
+    this.props.history.push(`/search?string=${e.target.value}`)
+     
+    if(!e.target.value)
+      this.props.history.push('/')
+  }
+
+  componentDidMount = () => {
+    const searchStr = this.props.history.location.search.split('=')
+    
+    if(searchStr?.[0] === '?string')
+      this.setState({searchValue: searchStr[1]})
   }
 
   dropSearch = () => {
-    const { handleDrop } = this.props
     this.setState({searchValue: '' })
-
-    handleDrop()
+    this.props.history.push('/')
   }
 
 
@@ -44,7 +47,4 @@ class Search extends PureComponent<ISearchProps, ISearchState>{
   }
 } 
 
-
-const mapDispatchToProps = { handleFilterString, handleDrop, setActive }
-
-export default connect(null, mapDispatchToProps)(Search)
+export default withRouter(Search)

@@ -16,19 +16,6 @@ export const articlesSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
-    handleFilterString: (state, action: PayloadAction<string>) => {
-      state.filteredArticles = state.articles.filter(element => {
-        return element.name.toLowerCase().indexOf(action.payload.toLowerCase()) > -1
-      })
-    },
-    handleFilterDate: (state, action: PayloadAction<string>) => {
-      state.filteredArticles = state.articles.filter(element => {
-        return element.date.indexOf(action.payload) > -1
-      })
-    },
-    handleDrop: state => {
-      state.filteredArticles = state.articles
-    },
     handleRead: (state, action: PayloadAction<number>) => {
       state.articles =  state.articles.map((element: IArticle) => ({
         ...element,
@@ -55,9 +42,6 @@ export const articlesSlice = createSlice({
 })
 
 export const { 
-  handleFilterString, 
-  handleFilterDate, 
-  handleDrop, 
   handleRead, 
   handleDeleteElement,
   handleEditElement,

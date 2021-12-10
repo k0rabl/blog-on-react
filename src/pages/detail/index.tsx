@@ -1,19 +1,19 @@
 import React, { ChangeEvent, Component } from 'react'
 import { withRouter } from "react-router"
-import { Props, IState } from './IDetail';
+import { Props, IState } from './IDetail'
 
+import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
+import { RootState } from '../../redux/store'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import AlertContext from '../../Context/AlertContext'
 import './Detail.sass'
-import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice';
-import { RootState } from '../../redux/store';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import AlertContext from '../../Context/AlertContext';
 
 const today = new Date()
 
 
 
-class Detail extends Component<Props, IState> {
+export class Detail extends Component<Props, IState> {
   static contextType = AlertContext
 
   constructor(props: Props){
@@ -128,7 +128,7 @@ class Detail extends Component<Props, IState> {
           editMode  
             ? <>        
               <div className="addImage">
-                <input type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
+                <input id="file" type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
                 <img src={image} alt="" />
               </div>
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>

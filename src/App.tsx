@@ -21,19 +21,21 @@ class App extends Component {
     return (
       <ModalProvider >
         <AlertProvider >
-          <div className="App">
-            <Alert />
-            <Modal />
-            <Header title='Blog'/>
-      
-            <Router>
+          <Router>
+            <div className="App">
+              <Header title='Blog'/>
+        
               <Switch>
                 {routes.map(({path, component, exact}, key) => (
                   <Route key={key} exact={exact} path={path} component={component} />
                 ))}
               </Switch>
-            </Router>
-          </div>
+
+              
+              <Alert />
+              <Modal />
+            </div>
+          </Router>
         </AlertProvider>
       </ModalProvider>
     )

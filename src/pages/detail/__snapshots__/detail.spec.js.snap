@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Detail /> should change input 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(Detail))
+        match={
+          Object {
+            "params": Object {
+              "id": 1,
+            },
+          }
+        }
+      >
+        <Connect(Detail)
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+        >
+          <Detail
+            articles={
+              Array [
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 1,
+                  "image": "",
+                  "isRead": true,
+                  "name": "How to use hooks in React?",
+                  "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 2,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React? (||)",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 3,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+                Object {
+                  "date": "2021-04-30",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 4,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+                Object {
+                  "date": "2021-11-14",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 5,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 6,
+                  "image": "",
+                  "isRead": false,
+                  "name": "second page",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 7,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 8,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+                Object {
+                  "date": "2021-05-20",
+                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                  "id": 9,
+                  "image": "",
+                  "isRead": false,
+                  "name": "How to use hooks in React?",
+                },
+              ]
+            }
+            editMode={true}
+            handleAddElement={[Function]}
+            handleEditElement={[Function]}
+            handleRead={[Function]}
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+          >
+            <div
+              className="detail"
+            >
+              <div
+                className="addImage"
+              >
+                <input
+                  accept="image/jpeg"
+                  id="file"
+                  name="image"
+                  onChange={[Function]}
+                  type="file"
+                />
+                <img
+                  alt=""
+                  src=""
+                />
+              </div>
+              <input
+                className="input input__name"
+                name="name"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+              <textarea
+                className="input input__desc"
+                name="desc"
+                onChange={[Function]}
+                value=""
+              />
+              <p
+                className="date"
+              >
+                2021-12-04
+              </p>
+              <div
+                className="buttons"
+              >
+                <button
+                  className="waves-effect waves-light redC lighten-3 btn button-second "
+                  onClick={[Function]}
+                >
+                  Back
+                </button>
+                <button
+                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
+                  onClick={[Function]}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </Detail>
+        </Connect(Detail)>
+      </withRouter(Connect(Detail))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

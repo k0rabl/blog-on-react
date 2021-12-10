@@ -1,40 +1,41 @@
 import React, { ChangeEvent, PureComponent } from 'react'
-import { connect } from 'react-redux'
-import {handleFilterDate, handleDrop} from '../Article/ArticleSlice'
-import { setActive } from '../Pagination/PaginationSlice'
-import { ICalendarProps, ICalendarState } from './ICalendar'
+import { ICalendarState } from './ICalendar'
 
 import './Calendar.sass'
+import { RouteComponentProps, withRouter } from 'react-router-dom'
 
-class Calendar extends PureComponent<ICalendarProps, ICalendarState>{
+class Calendar extends PureComponent<RouteComponentProps, ICalendarState>{
+  constructor(props: RouteComponentProps) {
+    super(props)
+
+    this.state = {
+      dateValue: ''
+    }
+  }
   
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { handleFilterDate } = this.props
-
-    
-    console.log( e.target.value);
-
     this.setState({dateValue: e.target.value })
-    setActive(1)
-    handleFilterDate(e.target.value)
+    this.props.history.push(`/search?date=${e.target.value}`)
+    
+    if(!e.target.value)
+      this.props.history.push('/')
+  }
+
+  componentDidMount = () => {
+    const searchStr = this.props.history.location.search.split('=')
+    
+    if(searchStr?.[0] === '?date')
+      this.setState({dateValue: searchStr[1]})
   }
   
-  componentWillUnmount = () => {
-    console.log('test');
-    
-    handleDrop()
-  }
-
   render() {
 
     return (
       <div className="input-field inline s6">
-        <input type='date' onChange={this.handleChange}/>
+        <input type='date' onChange={this.handleChange} value={this.state.dateValue}/>
       </div>
     )
   }
 } 
 
-const mapDispatchToProps = { handleFilterDate, handleDrop, setActive }
-
-export default connect(null, mapDispatchToProps)(Calendar)
+export default withRouter(Calendar)
