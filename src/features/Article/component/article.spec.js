@@ -1,5 +1,7 @@
 import React from "react"
 import Article from  './index'
+import { Modal } from  '../../Modal'
+
 import { mount } from 'enzyme';
 
 import { Provider } from 'react-redux'
@@ -8,6 +10,15 @@ import { ModalProvider } from "../../../Context/ModalContext";
 import {
   BrowserRouter as Router,
 } from "react-router-dom"
+
+const mockProps = {
+  id: 1, 
+  date: '2021-01-01', 
+  name: 'test', 
+  image: 'testImg',
+  desc: 'test descr', 
+  isRead: true,
+}
 
 
 describe('<Article />', () => {
@@ -26,9 +37,8 @@ describe('<Article />', () => {
       <Provider store={store}>
         <ModalProvider >
           <Router>
-            <Article 
-              match={{params: {id: 1}}}
-              />
+            <Article {...mockProps}/>
+            <Modal />
           </Router>
         </ModalProvider>
       </Provider>
@@ -44,6 +54,10 @@ describe('<Article />', () => {
   it('+++ check Button delete', () => {
     component
       .find('button.btn-delete')
+      .simulate('click');
+
+    component
+      .find('button.btn__exit')
       .simulate('click');
   })
 })

@@ -14,7 +14,7 @@ exports[`<Pagination /> +++ check Button of number page 1`] = `
   }
 >
   <Pagination
-    amount={3}
+    amount={5}
   >
     <div
       className="pagination"
@@ -36,18 +36,32 @@ exports[`<Pagination /> +++ check Button of number page 1`] = `
           1
         </button>
         <button
-          className="numberPage numberPage-2 active redC-bg"
+          className="numberPage numberPage-2 inactive"
           key="2"
           onClick={[Function]}
         >
           2
         </button>
         <button
-          className="numberPage numberPage-3 inactive"
+          className="numberPage numberPage-3 active redC-bg"
           key="3"
           onClick={[Function]}
         >
           3
+        </button>
+        <button
+          className="numberPage numberPage-4 inactive"
+          key="4"
+          onClick={[Function]}
+        >
+          4
+        </button>
+        <button
+          className="numberPage numberPage-5 inactive"
+          key="5"
+          onClick={[Function]}
+        >
+          5
         </button>
         <button
           className="numberPage next"
@@ -75,7 +89,7 @@ exports[`<Pagination /> +++ check arrow Button next 1`] = `
   }
 >
   <Pagination
-    amount={3}
+    amount={5}
   >
     <div
       className="pagination"
@@ -97,18 +111,32 @@ exports[`<Pagination /> +++ check arrow Button next 1`] = `
           1
         </button>
         <button
-          className="numberPage numberPage-2 active redC-bg"
+          className="numberPage numberPage-2 inactive"
           key="2"
           onClick={[Function]}
         >
           2
         </button>
         <button
-          className="numberPage numberPage-3 inactive"
+          className="numberPage numberPage-3 active redC-bg"
           key="3"
           onClick={[Function]}
         >
           3
+        </button>
+        <button
+          className="numberPage numberPage-4 inactive"
+          key="4"
+          onClick={[Function]}
+        >
+          4
+        </button>
+        <button
+          className="numberPage numberPage-5 inactive"
+          key="5"
+          onClick={[Function]}
+        >
+          5
         </button>
         <button
           className="numberPage next"
@@ -136,7 +164,7 @@ exports[`<Pagination /> +++ check arrow Button prev 1`] = `
   }
 >
   <Pagination
-    amount={3}
+    amount={5}
   >
     <div
       className="pagination"
@@ -158,18 +186,32 @@ exports[`<Pagination /> +++ check arrow Button prev 1`] = `
           1
         </button>
         <button
-          className="numberPage numberPage-2 active redC-bg"
+          className="numberPage numberPage-2 inactive"
           key="2"
           onClick={[Function]}
         >
           2
         </button>
         <button
-          className="numberPage numberPage-3 inactive"
+          className="numberPage numberPage-3 active redC-bg"
           key="3"
           onClick={[Function]}
         >
           3
+        </button>
+        <button
+          className="numberPage numberPage-4 inactive"
+          key="4"
+          onClick={[Function]}
+        >
+          4
+        </button>
+        <button
+          className="numberPage numberPage-5 inactive"
+          key="5"
+          onClick={[Function]}
+        >
+          5
         </button>
         <button
           className="numberPage next"
@@ -197,7 +239,7 @@ exports[`<Pagination /> +++ render the component 1`] = `
   }
 >
   <Pagination
-    amount={3}
+    amount={5}
   >
     <div
       className="pagination"
@@ -219,18 +261,32 @@ exports[`<Pagination /> +++ render the component 1`] = `
           1
         </button>
         <button
-          className="numberPage numberPage-2 active redC-bg"
+          className="numberPage numberPage-2 inactive"
           key="2"
           onClick={[Function]}
         >
           2
         </button>
         <button
-          className="numberPage numberPage-3 inactive"
+          className="numberPage numberPage-3 active redC-bg"
           key="3"
           onClick={[Function]}
         >
           3
+        </button>
+        <button
+          className="numberPage numberPage-4 inactive"
+          key="4"
+          onClick={[Function]}
+        >
+          4
+        </button>
+        <button
+          className="numberPage numberPage-5 inactive"
+          key="5"
+          onClick={[Function]}
+        >
+          5
         </button>
         <button
           className="numberPage next"

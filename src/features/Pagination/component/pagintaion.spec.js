@@ -11,7 +11,7 @@ describe('<Pagination />', () => {
 
   const initialState = { 
     pagination: {        
-      active: 2,
+      active: 3,
     }
   }
   
@@ -23,7 +23,7 @@ describe('<Pagination />', () => {
 
     component = mount(
       <Provider store={store}>
-          <Pagination amount={3}/>
+          <Pagination amount={5}/>
       </Provider>
     )
   })

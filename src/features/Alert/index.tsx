@@ -10,9 +10,10 @@ export const Alert = () => {
     setTimeout(() => setOpen(false), 5000)
   }, [isOpen, setOpen])
 
+  const active = isOpen ? 'active' : ''
   
   return (
-    <div className={`alert ${isOpen ? 'active' : ''}`}>
+    <div className={`alert ${active}`}>
       <div className="content">{message}</div>
       <div className="close"></div>
     </div>

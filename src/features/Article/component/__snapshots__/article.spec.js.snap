@@ -38,24 +38,22 @@ exports[`<Article /> +++ render the component 1`] = `
         }
       >
         <Connect(Article)
-          match={
-            Object {
-              "params": Object {
-                "id": 1,
-              },
-            }
-          }
+          date="2021-01-01"
+          desc="test descr"
+          id={1}
+          image="testImg"
+          isRead={true}
+          name="test"
         >
           <Article
+            date="2021-01-01"
+            desc="test descr"
             editMode={true}
             handleDeleteElement={[Function]}
-            match={
-              Object {
-                "params": Object {
-                  "id": 1,
-                },
-              }
-            }
+            id={1}
+            image="testImg"
+            isRead={true}
+            name="test"
           >
             <div
               className="container article"
@@ -63,9 +61,11 @@ exports[`<Article /> +++ render the component 1`] = `
               <div
                 className="leftImage"
               >
-                <span>
-                  No image
-                </span>
+                <img
+                  alt=""
+                  className="showImage"
+                  src="testImg"
+                />
               </div>
               <div
                 className="rightDescr"
@@ -78,21 +78,23 @@ exports[`<Article /> +++ render the component 1`] = `
                   >
                     <Link
                       className="link articleLink"
-                      to="/undefined"
+                      to="/1"
                     >
                       <LinkAnchor
                         className="link articleLink"
-                        href="/undefined"
+                        href="/1"
                         navigate={[Function]}
                       >
                         <a
                           className="link articleLink"
-                          href="/undefined"
+                          href="/1"
                           onClick={[Function]}
                         >
                           <div
-                            className="title undefined edit"
-                          />
+                            className="title read edit"
+                          >
+                            test
+                          </div>
                         </a>
                       </LinkAnchor>
                     </Link>
@@ -113,19 +115,59 @@ exports[`<Article /> +++ render the component 1`] = `
                   </div>
                   <div
                     className="date"
-                  />
+                  >
+                    2021-01-01
+                  </div>
                 </div>
                 <div
                   className="bottom"
                 >
                   <div
                     className="descr"
-                  />
+                  >
+                    test descr
+                  </div>
                 </div>
               </div>
             </div>
           </Article>
         </Connect(Article)>
+        <Modal>
+          <div
+            className="modalC false"
+          >
+            <div
+              className="modalC__content"
+            >
+              <h6
+                className="modalC__title"
+              >
+                Exit
+              </h6>
+              <p
+                className="modalC__text"
+              >
+                You realy want exit from edit-mode?
+              </p>
+              <div
+                className="modalC__buttons buttons"
+              >
+                <button
+                  className="waves-effect waves-light redC-bg lighten-3 btn btn__no button-second"
+                  onClick={[Function]}
+                >
+                  No, Thanks
+                </button>
+                <button
+                  className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
+                  onClick={[Function]}
+                >
+                  Exit
+                </button>
+              </div>
+            </div>
+          </div>
+        </Modal>
       </Router>
     </BrowserRouter>
   </ModalProvider>

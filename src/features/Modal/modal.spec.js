@@ -12,7 +12,7 @@ describe('<Modal />', () => {
   let component
   beforeEach(() => {
     component = mount(
-      <ModalProvider value={{isOpen: true}}>
+      <ModalProvider value={{isOpen: true, type: 'exit'}}>
         <Router>
           <Modal />
         </Router>
@@ -31,7 +31,21 @@ describe('<Modal />', () => {
       .simulate('click');
   })
   
-  it('+++ check Button exit/delete', () => {
+  it('+++ check Button exit', () => {
+    component
+      .find('button.btn__exit')
+      .simulate('click');
+  })
+  
+  it('+++ check Button Delete', () => {
+    component = mount(
+      <ModalProvider value={{isOpen: true, type: 'delete'}}>
+        <Router>
+          <Modal />
+        </Router>
+      </ModalProvider>
+    )
+
     component
       .find('button.btn__exit')
       .simulate('click');

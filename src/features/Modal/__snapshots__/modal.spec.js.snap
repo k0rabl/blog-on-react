@@ -5,6 +5,7 @@ exports[`<Modal /> +++ render the component 1`] = `
   value={
     Object {
       "isOpen": true,
+      "type": "exit",
     }
   }
 >
