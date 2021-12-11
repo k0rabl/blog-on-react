@@ -1,47 +1,59 @@
+@import '../../../helpers/colors'
 
 .article
   margin-top: 25px
   margin-bottom: 25px
   width: 100%
   display: flex
+  flex-direction: column
   justify-content: space-between
-  .leftImage
-    width: 30%
-    border: 1px solid #b10303
-    margin-right: 15px
-    display: flex
-    justify-content: center
-    align-items: center
-    img
-      width: 100%
-      height: 200px
-  .rightDescr
-    width: 70%
-  &Link
-    color: inherit
   
+  .top, .bottom
+    display: flex
   .top
     margin-bottom: 15px
-    display: flex
     justify-content: space-between
     &-left
       display: flex
       align-items: center
-      .title
+    .title, .date
+      margin-right: 15px
+      font-size: 26px
+      color: $black
+      transition: color .2s
+      font-weight: 700
+      &.edit
+        white-space: nowrap
+        text-overflow: ellipsis
+        max-width: 350px
+        overflow: hidden
+      &.read
+        color: $black+75
+      &:hover
+        color: $black+50
+    .btn
+      &-delete
         margin-right: 15px
-        font-size: 26px
-        color: #b10303
-        transition: color .2s
-        &.edit
-          color: #B94A3E
-          white-space: nowrap
-          text-overflow: ellipsis
-          max-width: 350px
-          overflow: hidden
-        &.read
-          color: #B94A3E
-        &:hover
-          color: #742c24
-      .btn
-        &-delete
-          margin-right: 15px
+        color: $black+70
+  .bottom
+    justify-content: flex-start
+    .leftImage
+      width: 150px
+      height: 150px
+      margin-right: 15px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 5px
+      border: 2px solid $gray
+      background-color: $light+35
+      span
+        color: $gray
+      img
+        width: 100%
+        height: 100%
+    .rightDescr
+      width: 65%
+      text-align: left
+      font-size: 18px
+      color: $gray

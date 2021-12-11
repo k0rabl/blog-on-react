@@ -1,12 +1,19 @@
+@import '../../../helpers/colors'
+
 .searchContainer
   position: relative
-  flex: 0 0 25%
-  input
-    color: #fff
+  flex: 0 0 25% 
+  max-height: 38px
+  input.searchInput
+    color: $black
     padding-right: 20px
     box-sizing: border-box
+    border-bottom: none
+    padding: 0 10px
     &:focus
-      color: #fff
+      color: $black
+      border-bottom: none !important
+      box-shadow: none !important
       background-color: transparent
   .close
     position: absolute
@@ -14,9 +21,10 @@
     top: 8px
     cursor: pointer
     display: none
-    background-color: #121B22
+    color: $black
+    background-color: transparent
     transition: color .2s
     &:hover
-      color: #B94A3E
+      color: $blue
     &.show
       display: block

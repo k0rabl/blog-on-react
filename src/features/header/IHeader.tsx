@@ -2,4 +2,8 @@ interface Header {
   title: string
 }
 
-export default Header
+interface IMapProps {
+  editMode?: Boolean
+}
+
+export type IProps = Header & IMapProps

@@ -36,7 +36,7 @@ class Calendar extends PureComponent<RouteComponentProps<{}>, ICalendarState>{
 
     return (
       <div className="input-field inline s6">
-        <input type='date' onChange={this.handleChange} value={this.state.dateValue}/>
+        <input className='dateInput' type='date' onChange={this.handleChange} value={this.state.dateValue}/>
       </div>
     )
   }

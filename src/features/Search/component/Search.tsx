@@ -45,7 +45,7 @@ class Search extends PureComponent<IProps, ISearchState>{
     const { searchValue } = this.state
     return  (
       <div className="searchContainer">
-        <input type="search" onChange={this.handleChange} value={searchValue} placeholder='Search'/>
+        <input className='searchInput' type="text" onChange={this.handleChange} value={searchValue} placeholder='Search'/>
         <i className={`material-icons close ${!!searchValue ? 'show': ''}`} onClick={this.dropSearch}>close</i>
       </div>
     )

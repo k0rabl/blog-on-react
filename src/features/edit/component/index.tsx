@@ -31,20 +31,20 @@ export class Edit extends PureComponent<IEditProps, IEditState>{
     const { editMode } = this.props
     const user = (
       <div className={`editMode__container editMode__container${editMode ? '': '-user'}`}>
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-edit" onClick={this.handleClick}>
+        <button  className="btn-edit button" onClick={this.handleClick}>
           <i className="material-icons left">edit</i>
-          Edit
+          Edit mode
         </button > 
       </div>
     )
 
     const edit = (
       <div className={`editMode__container editMode__container${editMode ? '-edit' : ''}`}>
-        <Link to='/add' className="waves-effect waves-light redC-bg lighten-3 btn btn-add">
+        <Link to='/add' className="waves-effect waves-light redC-bg lighten-3 btn btn-add button">
           <i className="material-icons left">add</i>
           Add article
         </Link > 
-        <button  className="waves-effect waves-light redC-bg lighten-3 btn btn-close" onClick={this.handleShowModal}>
+        <button  className="btn-close button" onClick={this.handleShowModal}>
           <i className="material-icons left">close</i>
           Exit
         </button > 

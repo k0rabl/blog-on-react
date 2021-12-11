@@ -23,13 +23,13 @@ export const Modal = () => {
         <div className="modalC__buttons buttons">
             <button 
               onClick={() => handleClick('close')} 
-              className="waves-effect waves-light redC-bg lighten-3 btn btn__no button-second"
+              className="btn__no button"
               >
                 No, Thanks
             </button>
             <button
                 onClick={() => handleClick('accept')}
-                className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
+                className="btn__exit  button"
             >
                 {type === 'delete' ? 'Delete' : 'Exit'}
             </button>

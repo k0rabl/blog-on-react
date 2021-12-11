@@ -124,6 +124,24 @@ export class Detail extends Component<Props, IState> {
 
     return(
       <div className="detail">
+         <div className="buttons">
+         
+         <button  
+           className="button " 
+           onClick={this.props.history.goBack}
+         >
+           Back
+         </button >
+
+         {editMode && 
+           <button  
+             className="button button-save" 
+             onClick={this.handleSave}
+           >
+             Save
+           </button > 
+         } 
+       </div>
         {
           editMode  
             ? <>        
@@ -143,24 +161,7 @@ export class Detail extends Component<Props, IState> {
 
         <p className="date">{date}</p>
 
-        <div className="buttons">
-         
-          <button  
-            className="waves-effect waves-light redC lighten-3 btn button-second " 
-            onClick={this.props.history.goBack}
-          >
-            Back
-          </button >
-
-          {editMode && 
-            <button  
-              className="waves-effect waves-light redC-bg lighten-3 btn button-primary" 
-              onClick={this.handleSave}
-            >
-              Save
-            </button > 
-          } 
-        </div>
+       
        
       </div>
     )

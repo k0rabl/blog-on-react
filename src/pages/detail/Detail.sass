@@ -7,30 +7,28 @@
 
   .showImage
     max-height: 250px
-  .input
-    color: #fff
-    width: 100%
-    display: block
-    background: transparent
-    outline: none
-    font-size: 18px
-    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
-    &__desc
+  input, textarea
+    &.input
       box-sizing: border-box
       padding: 15px
       border-radius: 5px
       border: 2px solid #9e9e9e
-      height: 12rem
       margin-top: 25px
-      margin-bottom: 25px
-      &:focus
+      &:focus, &:focus-visible
         border: 2px solid #26a69a;
         box-shadow: 0 1px 0 0 #26a69a;
+  .input__desc
+    height: 12rem
+    resize: none
+
   .buttons
     display: flex
-    width: 200px
-    margin: 0 auto
-    justify-content: space-around
+    margin-bottom: 25px
+    justify-content: flex-end
+    .button
+      font-size: 22px
+      &-save
+        margin-left: 15px 
 
   .addImage
     display: flex
