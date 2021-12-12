@@ -2,7 +2,7 @@ import './Header.sass'
 
 import React, { Component } from "react"
 import {IProps} from "./IHeader"
-import Calendar from "../calendar/Calendar"
+import Calendar from "../calendar"
 import Search from "../Search/component/Search"
 import { RootState } from '../../redux/store'
 import { connect } from 'react-redux'

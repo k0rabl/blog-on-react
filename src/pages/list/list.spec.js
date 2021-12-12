@@ -38,9 +38,11 @@ describe('<List />', () => {
     pagination: {
       active: 1
     }
-  };
-  const mockStore = configureStore();
-  let store, component, history;
+  }
+
+  const mockStore = configureStore()
+  let store, component, history
+
   beforeEach(() => {
     store = mockStore(initialState)
     history = createMemoryHistory()
@@ -86,7 +88,6 @@ describe('<List />', () => {
     )
     
     expect(componentSearch.find(ConnectedList).length).toEqual(1)
-    expect(componentSearch).toMatchSnapshot()
   })
 
   it('+++ check calendar search', () => {
@@ -101,7 +102,6 @@ describe('<List />', () => {
     )
     
     expect(component.find(ConnectedList).length).toEqual(1)
-    expect(component).toMatchSnapshot()
   })
 
   it('+++ check actions on dispatching ', () => {

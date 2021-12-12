@@ -53,13 +53,13 @@ exports[`<Modal /> +++ render the component 1`] = `
               className="modalC__buttons buttons"
             >
               <button
-                className="waves-effect waves-light redC-bg lighten-3 btn btn__no button-second"
+                className="btn__no button"
                 onClick={[Function]}
               >
                 No, Thanks
               </button>
               <button
-                className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
+                className="btn__exit  button"
                 onClick={[Function]}
               >
                 Exit

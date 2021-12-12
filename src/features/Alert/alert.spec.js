@@ -9,6 +9,7 @@ import {
 
 import { AlertProvider } from "../../Context/AlertContext";
 
+
 describe('<Alert />', () => {
   let component
   beforeEach(() => {
@@ -25,13 +26,16 @@ describe('<Alert />', () => {
 
   it('+++ render the component', () => {
     expect(component.find(Alert).length).toEqual(1)
+
+    // expect(component.find(Alert.prop))
     expect(component).toMatchSnapshot()
   })
 
   
-  it('+++ check alert is open', () => {
-    setTimeout(() => {
-      expect(component.prop('isOpen')).toBeFalsy()
-    }, 5100);
-  })
+//   it('+++ check alert is open', () => {
+    
+//     expect(component.prop('isOpen')).toBeFalsy()
+
+//     expect(component).toMatchSnapshot()
+//   })
 })

@@ -38,13 +38,8 @@ export class Detail extends Component<Props, IState> {
     let reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-        cb(reader.result)
+      cb(reader.result)
     };
-
-    reader.onerror = function (error) {
-        console.log('Error: ', error);
-    };
-
   }
 
   componentDidMount(){
@@ -127,7 +122,7 @@ export class Detail extends Component<Props, IState> {
          <div className="buttons">
          
          <button  
-           className="button " 
+           className="button button-back" 
            onClick={this.props.history.goBack}
          >
            Back
@@ -146,7 +141,7 @@ export class Detail extends Component<Props, IState> {
           editMode  
             ? <>        
               <div className="addImage">
-                <input id="file" type="file" name="image" accept="image/jpeg"  onChange={this.handleAddFile}/>      
+                <input id="file" type="file" name="image" accept="image/*"  onChange={this.handleAddFile}/>      
                 <img src={image} alt="" />
               </div>
               <input className="input input__name" type="text" name="name" value={name} onChange={this.handleChange}/>

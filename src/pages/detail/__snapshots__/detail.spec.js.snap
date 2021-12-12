@@ -1,905 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Detail /> +++ check Button back 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <AlertProvider>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "canGo": [Function],
-          "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "index": 0,
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "key": "hkfqoa",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      match={
-        Object {
-          "params": Object {
-            "id": 1,
-          },
-        }
-      }
-    >
-      <withRouter(Connect(Detail))>
-        <Connect(Detail)
-          history={
-            Object {
-              "action": "POP",
-              "block": [Function],
-              "canGo": [Function],
-              "createHref": [Function],
-              "entries": Array [
-                Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-              ],
-              "go": [Function],
-              "goBack": [Function],
-              "goForward": [Function],
-              "index": 0,
-              "length": 1,
-              "listen": [Function],
-              "location": Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              },
-              "push": [Function],
-              "replace": [Function],
-            }
-          }
-          location={
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            }
-          }
-          match={
-            Object {
-              "isExact": true,
-              "params": Object {},
-              "path": "/",
-              "url": "/",
-            }
-          }
-        >
-          <Detail
-            articles={
-              Array [
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 1,
-                  "image": "",
-                  "isRead": true,
-                  "name": "How to use hooks in React?",
-                  "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 2,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React? (||)",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 3,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-04-30",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 4,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-11-14",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 5,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 6,
-                  "image": "",
-                  "isRead": false,
-                  "name": "second page",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 7,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 8,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 9,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-              ]
-            }
-            editMode={true}
-            handleAddElement={[Function]}
-            handleEditElement={[Function]}
-            handleRead={[Function]}
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "key": "hkfqoa",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
-            <div
-              className="detail"
-            >
-              <div
-                className="addImage"
-              >
-                <input
-                  accept="image/jpeg"
-                  id="file"
-                  name="image"
-                  onChange={[Function]}
-                  type="file"
-                />
-                <img
-                  alt=""
-                  src=""
-                />
-              </div>
-              <input
-                className="input input__name"
-                name="name"
-                onChange={[Function]}
-                type="text"
-                value=""
-              />
-              <textarea
-                className="input input__desc"
-                name="desc"
-                onChange={[Function]}
-                value=""
-              />
-              <p
-                className="date"
-              >
-                2021-12-11
-              </p>
-              <div
-                className="buttons"
-              >
-                <button
-                  className="waves-effect waves-light redC lighten-3 btn button-second "
-                  onClick={[Function]}
-                >
-                  Back
-                </button>
-                <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
-                  onClick={[Function]}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </Detail>
-        </Connect(Detail)>
-      </withRouter(Connect(Detail))>
-    </Router>
-  </AlertProvider>
-</Provider>
-`;
-
-exports[`<Detail /> +++ check Button primary 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <AlertProvider>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "canGo": [Function],
-          "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "index": 0,
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "key": "hkfqoa",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      match={
-        Object {
-          "params": Object {
-            "id": 1,
-          },
-        }
-      }
-    >
-      <withRouter(Connect(Detail))>
-        <Connect(Detail)
-          history={
-            Object {
-              "action": "POP",
-              "block": [Function],
-              "canGo": [Function],
-              "createHref": [Function],
-              "entries": Array [
-                Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-              ],
-              "go": [Function],
-              "goBack": [Function],
-              "goForward": [Function],
-              "index": 0,
-              "length": 1,
-              "listen": [Function],
-              "location": Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              },
-              "push": [Function],
-              "replace": [Function],
-            }
-          }
-          location={
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            }
-          }
-          match={
-            Object {
-              "isExact": true,
-              "params": Object {},
-              "path": "/",
-              "url": "/",
-            }
-          }
-        >
-          <Detail
-            articles={
-              Array [
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 1,
-                  "image": "",
-                  "isRead": true,
-                  "name": "How to use hooks in React?",
-                  "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 2,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React? (||)",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 3,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-04-30",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 4,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-11-14",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 5,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 6,
-                  "image": "",
-                  "isRead": false,
-                  "name": "second page",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 7,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 8,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 9,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-              ]
-            }
-            editMode={true}
-            handleAddElement={[Function]}
-            handleEditElement={[Function]}
-            handleRead={[Function]}
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "key": "hkfqoa",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
-            <div
-              className="detail"
-            >
-              <div
-                className="addImage"
-              >
-                <input
-                  accept="image/jpeg"
-                  id="file"
-                  name="image"
-                  onChange={[Function]}
-                  type="file"
-                />
-                <img
-                  alt=""
-                  src=""
-                />
-              </div>
-              <input
-                className="input input__name"
-                name="name"
-                onChange={[Function]}
-                type="text"
-                value=""
-              />
-              <textarea
-                className="input input__desc"
-                name="desc"
-                onChange={[Function]}
-                value=""
-              />
-              <p
-                className="date"
-              >
-                2021-12-11
-              </p>
-              <div
-                className="buttons"
-              >
-                <button
-                  className="waves-effect waves-light redC lighten-3 btn button-second "
-                  onClick={[Function]}
-                >
-                  Back
-                </button>
-                <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
-                  onClick={[Function]}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </Detail>
-        </Connect(Detail)>
-      </withRouter(Connect(Detail))>
-    </Router>
-  </AlertProvider>
-</Provider>
-`;
-
-exports[`<Detail /> +++ check Prop matches with initialState 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <AlertProvider>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "canGo": [Function],
-          "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "index": 0,
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "key": "hkfqoa",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      match={
-        Object {
-          "params": Object {
-            "id": 1,
-          },
-        }
-      }
-    >
-      <withRouter(Connect(Detail))>
-        <Connect(Detail)
-          history={
-            Object {
-              "action": "POP",
-              "block": [Function],
-              "canGo": [Function],
-              "createHref": [Function],
-              "entries": Array [
-                Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-              ],
-              "go": [Function],
-              "goBack": [Function],
-              "goForward": [Function],
-              "index": 0,
-              "length": 1,
-              "listen": [Function],
-              "location": Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              },
-              "push": [Function],
-              "replace": [Function],
-            }
-          }
-          location={
-            Object {
-              "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            }
-          }
-          match={
-            Object {
-              "isExact": true,
-              "params": Object {},
-              "path": "/",
-              "url": "/",
-            }
-          }
-        >
-          <Detail
-            articles={
-              Array [
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 1,
-                  "image": "",
-                  "isRead": true,
-                  "name": "How to use hooks in React?",
-                  "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 2,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React? (||)",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 3,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-04-30",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 4,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-11-14",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 5,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 6,
-                  "image": "",
-                  "isRead": false,
-                  "name": "second page",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 7,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 8,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 9,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-              ]
-            }
-            editMode={true}
-            handleAddElement={[Function]}
-            handleEditElement={[Function]}
-            handleRead={[Function]}
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "key": "hkfqoa",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
-            <div
-              className="detail"
-            >
-              <div
-                className="addImage"
-              >
-                <input
-                  accept="image/jpeg"
-                  id="file"
-                  name="image"
-                  onChange={[Function]}
-                  type="file"
-                />
-                <img
-                  alt=""
-                  src=""
-                />
-              </div>
-              <input
-                className="input input__name"
-                name="name"
-                onChange={[Function]}
-                type="text"
-                value=""
-              />
-              <textarea
-                className="input input__desc"
-                name="desc"
-                onChange={[Function]}
-                value=""
-              />
-              <p
-                className="date"
-              >
-                2021-12-11
-              </p>
-              <div
-                className="buttons"
-              >
-                <button
-                  className="waves-effect waves-light redC lighten-3 btn button-second "
-                  onClick={[Function]}
-                >
-                  Back
-                </button>
-                <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
-                  onClick={[Function]}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </Detail>
-        </Connect(Detail)>
-      </withRouter(Connect(Detail))>
-    </Router>
-  </AlertProvider>
-</Provider>
-`;
-
 exports[`<Detail /> +++ render the component 1`] = `
 <Provider
   store={
@@ -924,8 +24,8 @@ exports[`<Detail /> +++ render the component 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
+              "key": "phb3br",
+              "pathname": "/1",
               "search": "",
               "state": undefined,
             },
@@ -938,8 +38,8 @@ exports[`<Detail /> +++ render the component 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "hkfqoa",
-            "pathname": "/",
+            "key": "phb3br",
+            "pathname": "/1",
             "search": "",
             "state": undefined,
           },
@@ -947,16 +47,12 @@ exports[`<Detail /> +++ render the component 1`] = `
           "replace": [Function],
         }
       }
-      match={
-        Object {
-          "params": Object {
-            "id": 1,
-          },
-        }
-      }
     >
-      <withRouter(Connect(Detail))>
-        <Connect(Detail)
+      <Route
+        component={[Function]}
+        path="/:id"
+      >
+        <withRouter(Connect(Detail))
           history={
             Object {
               "action": "POP",
@@ -966,8 +62,8 @@ exports[`<Detail /> +++ render the component 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
+                  "key": "phb3br",
+                  "pathname": "/1",
                   "search": "",
                   "state": undefined,
                 },
@@ -980,8 +76,8 @@ exports[`<Detail /> +++ render the component 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
+                "key": "phb3br",
+                "pathname": "/1",
                 "search": "",
                 "state": undefined,
               },
@@ -992,8 +88,8 @@ exports[`<Detail /> +++ render the component 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
+              "key": "phb3br",
+              "pathname": "/1",
               "search": "",
               "state": undefined,
             }
@@ -1001,94 +97,15 @@ exports[`<Detail /> +++ render the component 1`] = `
           match={
             Object {
               "isExact": true,
-              "params": Object {},
-              "path": "/",
-              "url": "/",
+              "params": Object {
+                "id": "1",
+              },
+              "path": "/:id",
+              "url": "/1",
             }
           }
         >
-          <Detail
-            articles={
-              Array [
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 1,
-                  "image": "",
-                  "isRead": true,
-                  "name": "How to use hooks in React?",
-                  "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 2,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React? (||)",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 3,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-04-30",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 4,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-11-14",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 5,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 6,
-                  "image": "",
-                  "isRead": false,
-                  "name": "second page",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 7,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 8,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-                Object {
-                  "date": "2021-05-20",
-                  "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
-                  "id": 9,
-                  "image": "",
-                  "isRead": false,
-                  "name": "How to use hooks in React?",
-                },
-              ]
-            }
-            editMode={true}
-            handleAddElement={[Function]}
-            handleEditElement={[Function]}
-            handleRead={[Function]}
+          <Connect(Detail)
             history={
               Object {
                 "action": "POP",
@@ -1098,8 +115,8 @@ exports[`<Detail /> +++ render the component 1`] = `
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "hkfqoa",
-                    "pathname": "/",
+                    "key": "phb3br",
+                    "pathname": "/1",
                     "search": "",
                     "state": undefined,
                   },
@@ -1112,8 +129,8 @@ exports[`<Detail /> +++ render the component 1`] = `
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
+                  "key": "phb3br",
+                  "pathname": "/1",
                   "search": "",
                   "state": undefined,
                 },
@@ -1124,8 +141,8 @@ exports[`<Detail /> +++ render the component 1`] = `
             location={
               Object {
                 "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
+                "key": "phb3br",
+                "pathname": "/1",
                 "search": "",
                 "state": undefined,
               }
@@ -1133,74 +150,211 @@ exports[`<Detail /> +++ render the component 1`] = `
             match={
               Object {
                 "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
+                "params": Object {
+                  "id": "1",
+                },
+                "path": "/:id",
+                "url": "/1",
               }
             }
           >
-            <div
-              className="detail"
+            <Detail
+              articles={
+                Array [
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 1,
+                    "image": "",
+                    "isRead": true,
+                    "name": "How to use hooks in React?",
+                    "preview": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 2,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React? (||)",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 3,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                  Object {
+                    "date": "2021-04-30",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 4,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                  Object {
+                    "date": "2021-11-14",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 5,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 6,
+                    "image": "",
+                    "isRead": false,
+                    "name": "second page",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 7,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 8,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                  Object {
+                    "date": "2021-05-20",
+                    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum.",
+                    "id": 9,
+                    "image": "",
+                    "isRead": false,
+                    "name": "How to use hooks in React?",
+                  },
+                ]
+              }
+              editMode={true}
+              handleAddElement={[Function]}
+              handleEditElement={[Function]}
+              handleRead={[Function]}
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "key": "phb3br",
+                      "pathname": "/1",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "key": "phb3br",
+                    "pathname": "/1",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": "phb3br",
+                  "pathname": "/1",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {
+                    "id": "1",
+                  },
+                  "path": "/:id",
+                  "url": "/1",
+                }
+              }
             >
               <div
-                className="addImage"
+                className="detail"
               >
+                <div
+                  className="buttons"
+                >
+                  <button
+                    className="button button-back"
+                    onClick={[Function]}
+                  >
+                    Back
+                  </button>
+                  <button
+                    className="button button-save"
+                    onClick={[Function]}
+                  >
+                    Save
+                  </button>
+                </div>
+                <div
+                  className="addImage"
+                >
+                  <input
+                    accept="image/*"
+                    id="file"
+                    name="image"
+                    onChange={[Function]}
+                    type="file"
+                  />
+                  <img
+                    alt=""
+                    src=""
+                  />
+                </div>
                 <input
-                  accept="image/jpeg"
-                  id="file"
-                  name="image"
+                  className="input input__name"
+                  name="name"
                   onChange={[Function]}
-                  type="file"
+                  type="text"
+                  value="How to use hooks in React?"
                 />
-                <img
-                  alt=""
-                  src=""
+                <textarea
+                  className="input input__desc"
+                  name="desc"
+                  onChange={[Function]}
+                  value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id deleniti suscipit nisi mollitia aliquid expedita earum voluptates excepturi, quod ratione ut a, laboriosam tempore blanditiis quasi aspernatur est adipisci tenetur quis vero voluptate fugiat. Minus necessitatibus fugiat non at, fuga quibusdam tenetur ratione quasi numquam vel explicabo nesciunt ipsum."
                 />
-              </div>
-              <input
-                className="input input__name"
-                name="name"
-                onChange={[Function]}
-                type="text"
-                value=""
-              />
-              <textarea
-                className="input input__desc"
-                name="desc"
-                onChange={[Function]}
-                value=""
-              />
-              <p
-                className="date"
-              >
-                2021-12-11
-              </p>
-              <div
-                className="buttons"
-              >
-                <button
-                  className="waves-effect waves-light redC lighten-3 btn button-second "
-                  onClick={[Function]}
+                <p
+                  className="date"
                 >
-                  Back
-                </button>
-                <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
-                  onClick={[Function]}
-                >
-                  Save
-                </button>
+                  2021-05-20
+                </p>
               </div>
-            </div>
-          </Detail>
-        </Connect(Detail)>
-      </withRouter(Connect(Detail))>
+            </Detail>
+          </Connect(Detail)>
+        </withRouter(Connect(Detail))>
+      </Route>
     </Router>
   </AlertProvider>
 </Provider>
 `;
 
-exports[`<Detail /> should change input 1`] = `
+exports[`<Detail /> +++ render witchout id 1`] = `
 <Provider
   store={
     Object {
@@ -1224,8 +378,8 @@ exports[`<Detail /> should change input 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
+              "key": "phb3br",
+              "pathname": "/1",
               "search": "",
               "state": undefined,
             },
@@ -1238,20 +392,13 @@ exports[`<Detail /> should change input 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "hkfqoa",
-            "pathname": "/",
+            "key": "phb3br",
+            "pathname": "/1",
             "search": "",
             "state": undefined,
           },
           "push": [Function],
           "replace": [Function],
-        }
-      }
-      match={
-        Object {
-          "params": Object {
-            "id": 1,
-          },
         }
       }
     >
@@ -1266,8 +413,8 @@ exports[`<Detail /> should change input 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
+                  "key": "phb3br",
+                  "pathname": "/1",
                   "search": "",
                   "state": undefined,
                 },
@@ -1280,8 +427,8 @@ exports[`<Detail /> should change input 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
+                "key": "phb3br",
+                "pathname": "/1",
                 "search": "",
                 "state": undefined,
               },
@@ -1292,15 +439,15 @@ exports[`<Detail /> should change input 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "hkfqoa",
-              "pathname": "/",
+              "key": "phb3br",
+              "pathname": "/1",
               "search": "",
               "state": undefined,
             }
           }
           match={
             Object {
-              "isExact": true,
+              "isExact": false,
               "params": Object {},
               "path": "/",
               "url": "/",
@@ -1398,8 +545,8 @@ exports[`<Detail /> should change input 1`] = `
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "hkfqoa",
-                    "pathname": "/",
+                    "key": "phb3br",
+                    "pathname": "/1",
                     "search": "",
                     "state": undefined,
                   },
@@ -1412,8 +559,8 @@ exports[`<Detail /> should change input 1`] = `
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "hkfqoa",
-                  "pathname": "/",
+                  "key": "phb3br",
+                  "pathname": "/1",
                   "search": "",
                   "state": undefined,
                 },
@@ -1424,15 +571,15 @@ exports[`<Detail /> should change input 1`] = `
             location={
               Object {
                 "hash": "",
-                "key": "hkfqoa",
-                "pathname": "/",
+                "key": "phb3br",
+                "pathname": "/1",
                 "search": "",
                 "state": undefined,
               }
             }
             match={
               Object {
-                "isExact": true,
+                "isExact": false,
                 "params": Object {},
                 "path": "/",
                 "url": "/",
@@ -1443,10 +590,26 @@ exports[`<Detail /> should change input 1`] = `
               className="detail"
             >
               <div
+                className="buttons"
+              >
+                <button
+                  className="button button-back"
+                  onClick={[Function]}
+                >
+                  Back
+                </button>
+                <button
+                  className="button button-save"
+                  onClick={[Function]}
+                >
+                  Save
+                </button>
+              </div>
+              <div
                 className="addImage"
               >
                 <input
-                  accept="image/jpeg"
+                  accept="image/*"
                   id="file"
                   name="image"
                   onChange={[Function]}
@@ -1473,24 +636,8 @@ exports[`<Detail /> should change input 1`] = `
               <p
                 className="date"
               >
-                2021-12-11
+                2021-12-12
               </p>
-              <div
-                className="buttons"
-              >
-                <button
-                  className="waves-effect waves-light redC lighten-3 btn button-second "
-                  onClick={[Function]}
-                >
-                  Back
-                </button>
-                <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn button-primary"
-                  onClick={[Function]}
-                >
-                  Save
-                </button>
-              </div>
             </div>
           </Detail>
         </Connect(Detail)>

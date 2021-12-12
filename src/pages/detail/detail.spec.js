@@ -1,10 +1,11 @@
 // import 'jsdom-global/register'
 import React from "react"
 import ConnectedDetail, { Detail } from './index'
-import { mount } from 'enzyme';
+import { mount, render } from 'enzyme';
 
 import {
   Router,
+  Route
 } from "react-router-dom"
 
 import {createMemoryHistory} from 'history'
@@ -15,7 +16,40 @@ import { handleRead, handleEditElement, handleAddElement } from '../../features/
 
 import Articles from "../../fixtures/Articles";
 import { AlertProvider } from "../../Context/AlertContext";
-const history = createMemoryHistory()
+
+// const history = createMemoryHistory()
+
+// function renderWithRouterMatch(
+//   ui,
+//   {
+//     path = "/",
+//     route = "/",
+//     history = createMemoryHistory({ initialEntries: [route] })
+//   } = {}
+// ) {
+//   const mockStore = configureStore();
+
+//   const store = mockStore({
+//     search: {        
+//       articles: Articles,
+//     },
+//     edit: {        
+//       editMode: true,
+//     }
+//   })
+//   return {
+//     ...mount(
+      
+//       <Provider store={store}>
+//         <AlertProvider>
+//           <Router history={history}>
+//             <Route path={path} component={ui} />
+//           </Router>
+//         </AlertProvider>
+//       </Provider>
+//     )
+//   };
+// }
 
 describe('<Detail />', () => {
   const initialState = { 
@@ -27,7 +61,9 @@ describe('<Detail />', () => {
     }
   };
   const mockStore = configureStore();
-  let store, component;
+  let store, component
+  
+  const history = createMemoryHistory({ initialEntries: ["/1"] })
 
   beforeEach(() => {
     store = mockStore(initialState)
@@ -35,67 +71,101 @@ describe('<Detail />', () => {
     component = mount(
       <Provider store={store}>
         <AlertProvider>
-          <Router history={history} match={{params: {id: 1}}}>
-            <ConnectedDetail />
-          </Router>
+          <Router history={history} >
+            <Route path="/:id" component={ConnectedDetail} />
+          </Router> 
         </AlertProvider>
       </Provider>
     )
   })
 
   it('+++ render the component', () => {
-    expect(component.find(ConnectedDetail).length).toEqual(1)
+    // expect(component.find(ConnectedDetail).length).toEqual(1)
+    // renderWithRouterMatch(ConnectedDetail, {
+    //   route: "/1",
+    //   path: "/:id"
+    // });
     expect(component).toMatchSnapshot()
   })
 
-  // it('+++ get id from props', () => {
-  //   expect(component.find(ConnectedDetail).prop('id').toEqual(1))
-  // })
+  
+  it('+++ render witchout id', () => {
+    store = mockStore(initialState)
+
+    component = mount(
+      <Provider store={store}>
+        <AlertProvider>
+          <Router history={history} >
+            <ConnectedDetail />
+          </Router> 
+        </AlertProvider>
+      </Provider>
+    )
+    
+    expect(component).toMatchSnapshot()
+  })
 
   it('+++ check Button back', () => {
     component
-      .find('button.button-second')
+      .find('button.button-back')
       .simulate('click')
-
-    expect(component).toMatchSnapshot()
   })
 
-  it('+++ check Button primary', () => {
+  it('+++ check Button save', () => {
     component
-      .find('button.button-primary')
+      .find('button.button-save')
       .simulate('click')
       
-    expect(component).toMatchSnapshot()
   })
 
-  it('should base64 file encoding', () => {
-    const mockFile = new File(['image'], 'test')
+  it('+++ should base64 file encoding', () => {
+    const file = new File([""], 'darthvader.png', {type: 'image/*'});
 
     component.find('input#file').simulate('change', {
       target: {
-        files: [mockFile]
+        files: [file]
       }
     })
   })
+  
+  it('+++ should fet errror size', () => {
+    const file = new File([""], 'darthvader.png', {type: 'image/*'})
+    Object.defineProperty(file, 'size', { value: 1024 * 5024 + 1 })
 
-  it('should change input', () => {
+    component.find('input#file').simulate('change', {
+      target: {
+        files: [file]
+      }
+    })       
+  })
+
+  it('+++ should change input', () => {
 
     component.find('input.input__name').simulate('change', {
       target: {
         value: 'test'
       }
     })
-    expect(component).toMatchSnapshot()
   })
 
   it('+++ check Prop matches with initialState', () => {
     expect(component.find(Detail).prop('articles')).toEqual(initialState.search.articles)
       
-    expect(component).toMatchSnapshot()
   })
 
   it('+++ check actions on dispatching ', () => {
     let action
+    store = mockStore(initialState)
+
+    component = mount(
+      <Provider store={store}>
+        <AlertProvider>
+          <Router history={history} >
+            <ConnectedDetail />
+          </Router> 
+        </AlertProvider>
+      </Provider>
+    )
 
     store.dispatch(handleRead(true))
     store.dispatch(handleEditElement(2))

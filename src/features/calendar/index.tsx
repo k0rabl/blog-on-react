@@ -6,7 +6,7 @@ import { RouteComponentProps, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setActive } from '../Pagination/PaginationSlice'
 
-class Calendar extends PureComponent<RouteComponentProps<{}>, ICalendarState>{
+export class Calendar extends PureComponent<RouteComponentProps<{}>, ICalendarState>{
   constructor(props: RouteComponentProps) {
     super(props)
 

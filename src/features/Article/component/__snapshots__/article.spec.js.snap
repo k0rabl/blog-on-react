@@ -59,68 +59,68 @@ exports[`<Article /> +++ render the component 1`] = `
               className="container article"
             >
               <div
-                className="leftImage"
-              >
-                <img
-                  alt=""
-                  className="showImage"
-                  src="testImg"
-                />
-              </div>
-              <div
-                className="rightDescr"
+                className="top"
               >
                 <div
-                  className="top"
+                  className="top-left"
                 >
-                  <div
-                    className="top-left"
+                  <Link
+                    className="link articleLink"
+                    to="/1"
                   >
-                    <Link
+                    <LinkAnchor
                       className="link articleLink"
-                      to="/1"
+                      href="/1"
+                      navigate={[Function]}
                     >
-                      <LinkAnchor
+                      <a
                         className="link articleLink"
                         href="/1"
-                        navigate={[Function]}
-                      >
-                        <a
-                          className="link articleLink"
-                          href="/1"
-                          onClick={[Function]}
-                        >
-                          <div
-                            className="title read edit"
-                          >
-                            test
-                          </div>
-                        </a>
-                      </LinkAnchor>
-                    </Link>
-                    <div
-                      className="buttons"
-                    >
-                      <button
-                        className="waves-effect waves-light redC-bg lighten-3 btn btn-delete"
                         onClick={[Function]}
                       >
-                        <i
-                          className="material-icons center"
+                        <div
+                          className="title read edit"
                         >
-                          delete
-                        </i>
-                      </button>
-                    </div>
-                  </div>
+                          test
+                        </div>
+                      </a>
+                    </LinkAnchor>
+                  </Link>
                   <div
-                    className="date"
+                    className="buttons"
                   >
-                    2021-01-01
+                    <button
+                      className="button btn-delete"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons center"
+                      >
+                        delete
+                      </i>
+                    </button>
                   </div>
                 </div>
                 <div
-                  className="bottom"
+                  className="date"
+                >
+                  2021-01-01
+                </div>
+              </div>
+              <div
+                className="bottom"
+              >
+                <div
+                  className="leftImage"
+                >
+                  <img
+                    alt=""
+                    className="showImage"
+                    src="testImg"
+                  />
+                </div>
+                <div
+                  className="rightDescr"
                 >
                   <div
                     className="descr"
@@ -153,13 +153,13 @@ exports[`<Article /> +++ render the component 1`] = `
                 className="modalC__buttons buttons"
               >
                 <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn btn__no button-second"
+                  className="btn__no button"
                   onClick={[Function]}
                 >
                   No, Thanks
                 </button>
                 <button
-                  className="waves-effect waves-light redC-bg lighten-3 btn btn__exit  button-primary"
+                  className="btn__exit  button"
                   onClick={[Function]}
                 >
                   Exit
