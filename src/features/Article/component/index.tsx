@@ -7,8 +7,7 @@ import { connect } from 'react-redux'
 import { RootState } from '../../../redux/store'
 import { handleDeleteElement } from '../ArticleSlice'
 
-// import AlertContext from '../../../Context/AlertContext'
-import ModalContext from '../../../Context/ModalContext'
+import ModalContext from '../../../context/ModalContext'
 
 class Article extends PureComponent<ArticleProps, IState> {
   static contextType = ModalContext /* AlertContext */ 

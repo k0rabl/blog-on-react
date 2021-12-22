@@ -1,6 +1,6 @@
 // import 'jsdom-global/register'
 import React from "react"
-import ConnectedDetail, { Detail } from './index'
+import ConnectedDetail, { Detail } from '../index'
 import { mount, render } from 'enzyme';
 
 import {
@@ -12,10 +12,10 @@ import {createMemoryHistory} from 'history'
 
 import configureStore from 'redux-mock-store'
 import { Provider } from "react-redux";
-import { handleRead, handleEditElement, handleAddElement } from '../../features/Article/ArticleSlice'
+import { handleRead, handleEditElement, handleAddElement } from '../../../features/Article/ArticleSlice'
 
-import Articles from "../../fixtures/Articles";
-import { AlertProvider } from "../../Context/AlertContext";
+import Articles from "../../../fixtures/Articles";
+import { AlertProvider } from "../../../context/AlertContext";
 
 // const history = createMemoryHistory()
 

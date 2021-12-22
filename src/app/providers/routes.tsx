@@ -1,5 +1,5 @@
-import Detail from './pages/detail'
-import List from './pages/list'
+import Detail from '../../pages/detail'
+import List from '../../pages/list'
 import { RouteProps } from 'react-router'
 
 const routes: Array<RouteProps> = [

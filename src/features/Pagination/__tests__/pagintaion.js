@@ -1,5 +1,5 @@
 import React from "react"
-import Pagination from './index'
+import Pagination from '../component/index'
 import { mount } from 'enzyme';
 
 import configureStore from 'redux-mock-store'

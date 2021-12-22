@@ -6,7 +6,7 @@ import { handleRead, handleEditElement, handleAddElement } from '../../features/
 import { RootState } from '../../redux/store'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import AlertContext from '../../Context/AlertContext'
+import AlertContext from '../../context/AlertContext'
 import './Detail.sass'
 
 const today = new Date()

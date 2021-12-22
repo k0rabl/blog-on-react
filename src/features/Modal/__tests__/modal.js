@@ -1,8 +1,8 @@
 import React from "react"
-import { Modal } from  './index'
+import { Modal } from  '../index'
 import { mount } from 'enzyme';
 
-import { ModalProvider } from "../../Context/ModalContext";
+import { ModalProvider } from "../../../context/ModalContext";
 import {
   BrowserRouter as Router,
 } from "react-router-dom"

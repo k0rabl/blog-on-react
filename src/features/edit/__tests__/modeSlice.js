@@ -1,4 +1,4 @@
-import reducer, { handleMode } from './modeSlice'
+import reducer, { handleMode } from '../modeSlice'
 
 const mockState = { editMode: false }
 

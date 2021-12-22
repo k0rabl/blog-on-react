@@ -1,4 +1,4 @@
-import reducer, { increment, decrement, setActive } from './PaginationSlice'
+import reducer, { increment, decrement, setActive } from '../PaginationSlice'
 
 test('+++ should return the initial state', () => {
   expect(reducer(undefined, {})).toEqual(

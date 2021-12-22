@@ -6,9 +6,9 @@ import
     handleEditElement,
     handleAddElement
   } 
-from './ArticleSlice'
+from '../ArticleSlice'
 
-import Articles from '../../fixtures/Articles'
+import Articles from '../../../fixtures/Articles'
 
 const mockInitialState =  { 
   filteredArticles: [],

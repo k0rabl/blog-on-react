@@ -12,17 +12,15 @@ const articlesPersistConfig = {
   storage: storage,
 }
 
-const persistedReducer = persistReducer(articlesPersistConfig, ArticleSlice)
+const persistedArticleSlice = persistReducer(articlesPersistConfig, ArticleSlice)
 
 export const store = configureStore({
   reducer: {
     pagination: paginationSlice, 
-    search: persistedReducer, 
+    search: persistedArticleSlice, 
     edit: modeSlice
   }
 })
  
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch

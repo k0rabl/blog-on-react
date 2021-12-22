@@ -1,12 +1,12 @@
 import React from "react"
-import Article from  './index'
+import Article from  '../component/index'
 import { Modal } from  '../../Modal'
 
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
 
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
-import { ModalProvider } from "../../../Context/ModalContext";
+import { ModalProvider } from '../../../context/ModalContext'
 import {
   BrowserRouter as Router,
 } from "react-router-dom"

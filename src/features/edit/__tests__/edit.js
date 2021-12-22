@@ -1,5 +1,5 @@
 import React from "react"
-import ConnectedEdit, { Edit } from './index'
+import ConnectedEdit, { Edit } from '../component/index'
 import { mount } from 'enzyme';
 
 import {

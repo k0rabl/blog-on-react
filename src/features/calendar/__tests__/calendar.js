@@ -1,5 +1,5 @@
 import React from "react"
-import ConnectedCalendar, { Calendar } from './index'
+import ConnectedCalendar, { Calendar } from '../index'
 import { mount } from 'enzyme';
 
 import {

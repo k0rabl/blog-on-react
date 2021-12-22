@@ -1,5 +1,5 @@
 import React from "react"
-import ConnectedList, { List } from './index'
+import ConnectedList, { List } from '../index'
 import { mount } from 'enzyme';
 
 import {
@@ -9,9 +9,9 @@ import {
 
 import configureStore from 'redux-mock-store'
 import { Provider } from "react-redux";
-import { setActive } from '../../features/Pagination/PaginationSlice'
+import { setActive } from '../../../features/Pagination/PaginationSlice'
 
-import Articles from "../../fixtures/Articles";
+import Articles from "../../../fixtures/Articles";
 import {createMemoryHistory} from 'history'
 
 

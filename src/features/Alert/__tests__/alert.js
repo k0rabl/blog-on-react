@@ -1,13 +1,10 @@
 import React from "react"
-import { Alert } from './index'
-import { mount } from 'enzyme';
+import { Alert } from '../index'
+import { mount } from 'enzyme'
 
-import {
-  BrowserRouter as Router,
-} from "react-router-dom"
+import { BrowserRouter as Router } from 'react-router-dom'
 
-
-import { AlertProvider } from "../../Context/AlertContext";
+import { AlertProvider } from '../../../context/AlertContext'
 
 
 describe('<Alert />', () => {

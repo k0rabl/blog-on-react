@@ -6,7 +6,7 @@ import { IEditProps, IEditState } from './IEdit'
 import './Edit.sass'
 import { RootState } from '../../../redux/store'
 import { Link } from 'react-router-dom'
-import ModalContext from '../../../Context/ModalContext'
+import ModalContext from '../../../context/ModalContext'
 
 export class Edit extends PureComponent<IEditProps, IEditState>{
   static contextType = ModalContext  
