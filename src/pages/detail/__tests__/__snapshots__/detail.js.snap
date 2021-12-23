@@ -24,7 +24,7 @@ exports[`<Detail /> +++ render the component 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "3im2r0",
+              "key": "0wux6n",
               "pathname": "/1",
               "search": "",
               "state": undefined,
@@ -38,7 +38,7 @@ exports[`<Detail /> +++ render the component 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "3im2r0",
+            "key": "0wux6n",
             "pathname": "/1",
             "search": "",
             "state": undefined,
@@ -62,7 +62,7 @@ exports[`<Detail /> +++ render the component 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "3im2r0",
+                  "key": "0wux6n",
                   "pathname": "/1",
                   "search": "",
                   "state": undefined,
@@ -76,7 +76,7 @@ exports[`<Detail /> +++ render the component 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "3im2r0",
+                "key": "0wux6n",
                 "pathname": "/1",
                 "search": "",
                 "state": undefined,
@@ -88,7 +88,7 @@ exports[`<Detail /> +++ render the component 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "3im2r0",
+              "key": "0wux6n",
               "pathname": "/1",
               "search": "",
               "state": undefined,
@@ -115,7 +115,7 @@ exports[`<Detail /> +++ render the component 1`] = `
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "3im2r0",
+                    "key": "0wux6n",
                     "pathname": "/1",
                     "search": "",
                     "state": undefined,
@@ -129,7 +129,7 @@ exports[`<Detail /> +++ render the component 1`] = `
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "3im2r0",
+                  "key": "0wux6n",
                   "pathname": "/1",
                   "search": "",
                   "state": undefined,
@@ -141,7 +141,7 @@ exports[`<Detail /> +++ render the component 1`] = `
             location={
               Object {
                 "hash": "",
-                "key": "3im2r0",
+                "key": "0wux6n",
                 "pathname": "/1",
                 "search": "",
                 "state": undefined,
@@ -249,7 +249,7 @@ exports[`<Detail /> +++ render the component 1`] = `
                   "entries": Array [
                     Object {
                       "hash": "",
-                      "key": "3im2r0",
+                      "key": "0wux6n",
                       "pathname": "/1",
                       "search": "",
                       "state": undefined,
@@ -263,7 +263,7 @@ exports[`<Detail /> +++ render the component 1`] = `
                   "listen": [Function],
                   "location": Object {
                     "hash": "",
-                    "key": "3im2r0",
+                    "key": "0wux6n",
                     "pathname": "/1",
                     "search": "",
                     "state": undefined,
@@ -275,7 +275,7 @@ exports[`<Detail /> +++ render the component 1`] = `
               location={
                 Object {
                   "hash": "",
-                  "key": "3im2r0",
+                  "key": "0wux6n",
                   "pathname": "/1",
                   "search": "",
                   "state": undefined,
@@ -378,7 +378,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
           "entries": Array [
             Object {
               "hash": "",
-              "key": "3im2r0",
+              "key": "0wux6n",
               "pathname": "/1",
               "search": "",
               "state": undefined,
@@ -392,7 +392,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "3im2r0",
+            "key": "0wux6n",
             "pathname": "/1",
             "search": "",
             "state": undefined,
@@ -413,7 +413,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
               "entries": Array [
                 Object {
                   "hash": "",
-                  "key": "3im2r0",
+                  "key": "0wux6n",
                   "pathname": "/1",
                   "search": "",
                   "state": undefined,
@@ -427,7 +427,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
               "listen": [Function],
               "location": Object {
                 "hash": "",
-                "key": "3im2r0",
+                "key": "0wux6n",
                 "pathname": "/1",
                 "search": "",
                 "state": undefined,
@@ -439,7 +439,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
           location={
             Object {
               "hash": "",
-              "key": "3im2r0",
+              "key": "0wux6n",
               "pathname": "/1",
               "search": "",
               "state": undefined,
@@ -545,7 +545,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "3im2r0",
+                    "key": "0wux6n",
                     "pathname": "/1",
                     "search": "",
                     "state": undefined,
@@ -559,7 +559,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "3im2r0",
+                  "key": "0wux6n",
                   "pathname": "/1",
                   "search": "",
                   "state": undefined,
@@ -571,7 +571,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
             location={
               Object {
                 "hash": "",
-                "key": "3im2r0",
+                "key": "0wux6n",
                 "pathname": "/1",
                 "search": "",
                 "state": undefined,
@@ -636,7 +636,7 @@ exports[`<Detail /> +++ render witchout id 1`] = `
               <p
                 className="date"
               >
-                2021-12-22
+                2021-12-23
               </p>
             </div>
           </Detail>
